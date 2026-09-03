@@ -1,0 +1,76 @@
+% =========================================================
+% Template TCC - UNISALES
+% Elaborado por: Éberte Freitas 24/03/2026
+% =========================================================
+
+% Pacotes básicos
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[
+    backend=biber,
+    style=abnt,
+    citestyle=abnt
+]{biblatex}
+\usepackage{caption}
+
+\captionsetup{
+    justification=raggedright,
+    singlelinecheck=false
+}
+
+% Margens
+\geometry{
+    left=3cm,
+    right=2cm,
+    top=3cm,
+    bottom=2cm
+}
+
+% Fonte Arial
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Espaçamento
+\setstretch{1}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% Seções
+% ================= FORMATAÇÃO DAS SEÇÕES =================
+\usepackage{titlesec}
+
+% SEÇÃO (1) → MAIÚSCULA, NEGRITO
+\titleformat{\section}
+{\normalfont\bfseries\uppercase}
+{\thesection.}{0.5em}{}
+
+% SUBSEÇÃO (1.1) → MAIÚSCULA, NORMAL
+\titleformat{\subsection}
+{\normalfont\uppercase}
+{\thesubsection}{0.5em}{}
+
+% SUBSUBSEÇÃO (1.1.1) → minúscula, negrito
+\titleformat{\subsubsection}
+{\normalfont\bfseries}
+{\thesubsubsection}{0.5em}{}
+
+% Espaçamento (opcional, mas melhora fidelidade)
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
+
+% ================= BIBLIOGRAFIA ABNT =================
+\usepackage[
+    backend=biber,
+    style=abnt,
+    citestyle=abnt
+]{biblatex}
+
+\addbibresource{Referencias.bib}

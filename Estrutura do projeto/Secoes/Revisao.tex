@@ -1,0 +1,347 @@
+% ─── BASE TEÓRICA ─────────────────────────────────────────
+\section{Base Teórica}
+
+Esta seção apresenta a fundamentação teórica que sustenta o
+trabalho, organizada de modo a evidenciar a lógica de
+construção da pesquisa: o problema organizacional é
+compreendido a partir da Engenharia de Processos, o
+redesenho do fluxo é conduzido segundo a disciplina do
+\textit{Business Process Management} (BPM), a transformação
+desse redesenho em solução computacional é orientada pela
+Engenharia de Software e pela Engenharia de Requisitos, a
+implementação é viabilizada pela abordagem \textit{low-code},
+e o resultado operacional é analisado à luz da automação de
+processos. Dessa forma, a tecnologia não é apresentada como
+ponto de partida do trabalho, mas como consequência de um
+processo de análise e redesenho previamente conduzido.
+
+\subsection{Engenharia de Processos e Transformação
+Organizacional}
+
+A Engenharia de Processos constitui a etapa inicial da
+transformação digital, na medida em que estabelece que a
+implantação de qualquer solução tecnológica deve decorrer de
+uma necessidade operacional previamente identificada, e não
+o contrário. Sob essa perspectiva, compreender o processo
+existente --- seus participantes, atividades manuais, pontos
+de falha e oportunidades de melhoria --- é condição prévia
+para que a automação produza ganhos reais de padronização,
+rastreabilidade e governança \cite{SantosCaldeiraPacheco2026}.
+
+Um dos instrumentos centrais dessa abordagem é a
+representação do processo em dois estados complementares.
+O processo atual, ou \textbf{AS-IS}, descreve o fluxo antes
+da intervenção, evidenciando comunicação descentralizada,
+ausência de padronização, dependência de controles manuais e
+baixa rastreabilidade das informações. O processo futuro, ou
+\textbf{TO-BE}, representa o fluxo redesenhado após a
+implantação da solução, contemplando abertura estruturada,
+registro centralizado, definição clara de responsáveis,
+automação de notificações e acompanhamento do ciclo de vida
+de cada ocorrência \cite{SantosCaldeiraPacheco2026}. A
+transição entre esses dois estados não decorre da simples
+transposição do fluxo manual para um ambiente digital: quando
+a digitalização ocorre sem revisão estrutural do processo, ela
+tende a reproduzir, em formato eletrônico, as mesmas
+ineficiências do modelo anterior
+\cite{SantosCaldeiraPacheco2026}. O foco desta pesquisa,
+portanto, não é demonstrar que um novo sistema foi criado,
+mas evidenciar que o processo de gestão de chamados internos
+foi analisado e redesenhado antes de sua automação.
+
+\subsection{Gestão de Processos de Negócio (BPM)}
+
+O \textit{Business Process Management} (BPM) fornece o
+arcabouço metodológico que estrutura o ciclo de
+identificação, modelagem, análise, redesenho, automação e
+monitoramento de um processo organizacional
+\cite{Ramos2024}. Trata-se de uma disciplina que orienta a
+organização a superar a lógica funcional tradicional,
+substituindo-a por uma visão orientada a processos, capaz de
+atravessar diferentes áreas e gerar valor de ponta a ponta
+\cite{SantosCaldeiraPacheco2026}.
+
+No contexto de chamados internos entre áreas, o BPM orienta a
+definição dos estados possíveis do chamado, as
+responsabilidades de cada ator no fluxo e os critérios de
+encerramento. \cite{Lopes2024} demonstraram que a
+digitalização de processos com BPM e ferramentas do
+ecossistema Microsoft resultou em repositório único de dados
+com rastreabilidade completa, eliminando a comunicação
+informal entre setores. Em sentido semelhante,
+\cite{Ramos2024} evidenciam que a disponibilização de dados
+gerenciais estruturados constitui o resultado de maior valor
+percebido após iniciativas de BPM em instituições de médio e
+grande porte, ao passo que
+\cite{SantosCaldeiraPacheco2026} destacam que a efetividade
+da transformação digital depende da revisão estruturada dos
+processos e do fortalecimento das capacidades
+organizacionais, e não apenas da incorporação de novas
+ferramentas.
+
+O projeto desenvolvido neste trabalho é relacionado às
+etapas do ciclo de BPM conforme apresentado no
+Quadro~\ref{quadro:bpm-projeto}.
+
+\begin{table}[H]
+\caption{Relação entre as etapas do BPM e o projeto desenvolvido}
+\label{quadro:bpm-projeto}
+\centering
+\begin{tabular}{p{2.6cm} p{9.2cm}}
+\hline
+\textbf{Etapa do BPM} & \textbf{Aplicação no projeto} \\
+\hline
+Identificação & Análise do processo de comunicação de
+chamados internos entre áreas. \\
+\hline
+Modelagem & Construção da representação do fluxo atual
+(AS-IS) e do fluxo futuro (TO-BE). \\
+\hline
+Análise & Identificação dos gargalos operacionais a partir
+do levantamento de requisitos junto aos participantes. \\
+\hline
+Redesenho & Definição do novo fluxo de atendimento, com
+estados, responsáveis e regras de negócio. \\
+\hline
+Automação & Desenvolvimento dos componentes no ecossistema
+Microsoft 365 (Power Apps, Microsoft List e Power
+Automate). \\
+\hline
+Monitoramento & Construção do painel gerencial no Power BI
+como base para indicadores de desempenho. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor,
+adaptado de \cite{Ramos2024} e \cite{SantosCaldeiraPacheco2026}}
+\end{table}
+
+A utilização do BPM neste trabalho reforça que a tecnologia
+foi aplicada como consequência da melhoria do processo, e
+não como ponto inicial da solução.
+
+\subsection{Engenharia de Software em Ambiente Low-Code}
+
+A Engenharia de Software é a disciplina responsável por
+transformar necessidades organizacionais em uma solução
+tecnológica estruturada, por meio da aplicação sistemática de
+métodos de análise, projeto, implementação e validação
+\cite{Alves2022}. A adoção de uma plataforma \textit{low-code}
+não elimina essa disciplina: ela modifica a forma de
+implementação, substituindo a codificação manual extensiva
+por configuração visual e componentes pré-construídos, mas
+mantém a necessidade de análise de requisitos, definição de
+arquitetura, estruturação de dados e validação do
+comportamento esperado \cite{Mendes2024}.
+
+Este trabalho relaciona explicitamente as etapas tradicionais
+da Engenharia de Software às atividades desenvolvidas em
+ambiente \textit{low-code}: o levantamento da necessidade
+corresponde à pesquisa de campo conduzida junto aos três
+perfis profissionais envolvidos no processo; a especificação
+de requisitos corresponde à consolidação dos requisitos
+funcionais e não funcionais; a definição de arquitetura
+corresponde à escolha dos componentes do ecossistema
+Microsoft 365 e à forma como eles se integram; a
+implementação corresponde à construção do aplicativo, da
+lista e dos fluxos de automação; e os testes e a validação
+correspondem à verificação do funcionamento integrado e à
+avaliação da solução junto aos participantes. Essa
+correspondência evidencia que, mesmo em ambiente
+\textit{low-code}, o projeto preserva as características de
+um trabalho de engenharia, com requisitos funcionais e não
+funcionais bem definidos.
+
+\subsection{Engenharia de Requisitos}
+
+A Engenharia de Requisitos é a área da Engenharia de Software
+responsável por identificar, documentar, validar e gerenciar
+as necessidades dos \textit{stakeholders} ao longo do ciclo
+de desenvolvimento de um sistema. A qualidade dos requisitos
+influencia diretamente a qualidade da solução produzida, pois
+falhas introduzidas nessa etapa tendem a gerar retrabalho e
+aumento de custos \cite{Alves2022}. Segundo
+\cite{CarvalhoJunior2022}, a elicitação constitui uma das
+fases mais críticas da Engenharia de Requisitos, pois a
+qualidade de um software depende da correta compreensão das
+necessidades dos usuários e da capacidade de alinhar os
+requisitos gerados às metas do negócio --- alinhamento que,
+segundo os mesmos autores, é favorecido quando os requisitos
+são derivados a partir da modelagem prévia do processo de
+negócio, aproximando a Engenharia de Requisitos da Engenharia
+de Processos discutida anteriormente.
+
+Neste trabalho, cada necessidade identificada junto aos
+participantes da pesquisa foi conduzida por um percurso
+específico até se tornar parte da solução, conforme
+ilustrado no exemplo do Quadro~\ref{quadro:necessidade-requisito}.
+
+\begin{table}[H]
+\caption{Do problema organizacional ao requisito
+implementado}
+\label{quadro:necessidade-requisito}
+\centering
+\begin{tabular}{p{3.4cm} p{3.9cm} p{4.5cm}}
+\hline
+\textbf{Necessidade identificada} & \textbf{Requisito
+funcional} & \textbf{Implementação} \\
+\hline
+Dificuldade para acompanhar quem está responsável pelo
+chamado. & O sistema deve permitir identificar o responsável
+pela tratativa. & Campo de responsável pela tratativa
+integrado ao fluxo de atendimento na Microsoft List. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor}
+\end{table}
+
+Os requisitos de um sistema dividem-se, de forma clássica, em
+requisitos funcionais, que descrevem os serviços que o
+sistema deve oferecer, e requisitos não funcionais, que
+estabelecem restrições de qualidade como segurança,
+rastreabilidade, usabilidade e disponibilidade
+\cite{Alves2022}. No contexto deste trabalho, os requisitos
+funcionais contemplam a abertura padronizada de chamados, a
+geração automática de protocolo, o controle de status e a
+geração de indicadores gerenciais; os requisitos não
+funcionais incluem a operação dentro do ecossistema Microsoft
+365 já licenciado pela organização e o acesso diferenciado por
+perfil de usuário \cite{Lopes2024}.
+
+Entre as técnicas de elicitação de requisitos, o uso de
+questionários e formulários estruturados destaca-se por
+permitir a coleta padronizada de informações junto a
+diferentes perfis de \textit{stakeholders}, com menor custo
+operacional em comparação a técnicas presenciais
+\cite{Gil2002}. A segmentação das perguntas conforme o papel
+do respondente no processo --- nível operacional, de
+supervisão ou de gestão --- favorece a triangulação das
+informações coletadas, permitindo validar o mesmo fluxo sob
+diferentes perspectivas organizacionais.
+
+\subsection{Plataformas Low-Code como Estratégia Tecnológica}
+
+As plataformas \textit{low-code} constituem uma estratégia
+tecnológica para implementação de soluções corporativas,
+especialmente em organizações que não dispõem de equipes de
+desenvolvimento dedicadas. O paradigma \textit{low-code}
+minimiza a necessidade de codificação manual por meio de
+interfaces visuais e componentes pré-configurados, permitindo
+que profissionais com menor especialização técnica construam
+e mantenham aplicações funcionais \cite{Alves2022}.
+\cite{Santos2023} destacam que essa característica tem
+viabilizado o fenômeno dos \textit{citizen developers} ---
+colaboradores das áreas de negócio que assumem papel ativo na
+construção de soluções digitais sem depender exclusivamente
+de equipes de TI --- e que a combinação entre BPM e
+\textit{low-code} é especialmente eficaz na construção de
+repositórios e painéis de acompanhamento, pois permite que as
+regras de negócio sejam configuradas pelas próprias áreas
+proprietárias dos processos. \cite{Costa2022} demonstraram,
+em estudo de caso aplicado, que a adoção de ferramentas
+\textit{low-code} resultou em rastreabilidade completa e
+redução de 45\% no tempo de processamento de solicitações
+internas, com desenvolvimento concluído em semanas.
+
+Este trabalho não pretende apresentar o \textit{low-code}
+como substituto da programação tradicional, pois não há, na
+literatura consultada, métricas suficientes para sustentar
+tal comparação. O foco adotado é demonstrar como a plataforma
+possibilitou implementar uma solução integrada ao ambiente
+corporativo já existente, reduzindo barreiras técnicas e
+permitindo a criação de uma aplicação alinhada às
+necessidades do processo redesenhado. A arquitetura adotada é
+composta por quatro componentes do ecossistema Microsoft 365.
+O primeiro é o \textbf{Power Apps}, interface de abertura e
+acompanhamento do chamado. O segundo é a \textbf{Microsoft
+List}, evolução das listas do SharePoint Online, que funciona
+como repositório centralizado das informações, herdando
+recursos de controle de versão, permissões por perfil e
+integração nativa com o Power Automate e o Power BI
+\cite{Mendes2024}. O terceiro é o \textbf{Power Automate},
+responsável pela execução das regras de negócio e das
+notificações automáticas. O quarto é o \textbf{Power BI},
+responsável pela análise gerencial e geração de indicadores.
+Essa arquitetura reflete o modelo de integração nativa entre
+componentes do Microsoft 365, sem necessidade de conectores
+externos ou infraestrutura adicional \cite{Costa2022}.
+
+\subsection{Automação de Processos}
+
+A automação de processos é o mecanismo pelo qual regras de
+negócio previamente definidas passam a ser executadas de
+forma padronizada, reduzindo a dependência de atividades
+manuais para comunicação, direcionamento e acompanhamento de
+demandas \cite{ReisFaria2024}. Estudos sobre automação
+robótica de processos (RPA) em contextos organizacionais
+distintos do estudado neste trabalho indicam ganhos
+recorrentes de padronização e redução de retrabalho quando a
+automação é aplicada sobre um processo previamente revisado,
+e não sobre um fluxo manual simplesmente transposto para o
+ambiente digital \cite{ReisFaria2024}.
+
+No processo analisado, a automação substitui uma sequência de
+etapas dependentes de ação humana --- identificação da
+necessidade, envio de comunicação e acompanhamento manual do
+retorno --- por uma sequência orientada a eventos, na qual a
+alteração de um registro dispara automaticamente a regra
+correspondente, a notificação ao responsável e a atualização
+do histórico. Essa transformação está alinhada ao que
+\cite{Lopes2024} descrevem como resultado da digitalização de
+processos com ferramentas do ecossistema Microsoft: repositório
+único de dados, com rastreabilidade completa e eliminação da
+comunicação informal entre setores. A automação, portanto, não
+é tratada neste trabalho como mecanismo isolado de registro,
+mas como consequência do redesenho do processo discutido nas
+seções anteriores.
+
+\subsection{SLA na Gestão de Chamados Internos}
+
+O Acordo de Nível de Serviço (\textit{Service Level
+Agreement} --- SLA) é o instrumento que formaliza prazos,
+critérios de qualidade e responsabilidades no atendimento de
+demandas internas. \cite{Malheiros2024} concluem que o SLA é
+fundamental para estabelecer expectativas claras entre
+provedores e usuários de serviços, promovendo qualidade,
+transparência e resolução eficaz de disputas, e destacam que
+a automação do controle de prazos --- com geração de alertas
+quando um chamado se aproxima do vencimento --- é condição
+para que o SLA deixe de ser apenas um documento formal e passe
+a ser um instrumento ativo de gestão. No contexto deste
+trabalho, o SLA é incorporado como requisito não funcional e
+como regra de negócio associada à prioridade de cada chamado,
+integrando-se ao ciclo de monitoramento previsto pelo BPM.
+
+\subsection{Comunicação Interna e Gestão de Informações entre
+Áreas}
+
+A comunicação interna é reconhecida na literatura como fator
+crítico para a eficiência operacional e para o desempenho
+organizacional. \cite{Souza2023} concluem, em revisão de
+literatura, que grande parte das organizações tem dificuldade
+em manter uma comunicação interna eficiente, optando, na
+maioria das vezes, por canais que não garantem registro,
+completude ou rastreabilidade das informações trocadas entre
+setores. A substituição de canais informais por sistemas
+estruturados, com registro automático e notificação
+padronizada, reduz erros, elimina retrabalho e melhora o
+desempenho das equipes envolvidas \cite{Lopes2024}.
+
+No contexto específico da gestão de chamados internos, a
+formalização do fluxo por meio de um canal estruturado
+representa a passagem de um modelo reativo --- no qual o
+problema é comunicado de forma \textit{ad hoc} --- para um
+modelo proativo, no qual cada chamado gera automaticamente um
+protocolo, uma notificação à área responsável e um registro
+rastreável desde a abertura até o encerramento. Essa
+transição é o elo final entre os seis eixos teóricos
+apresentados nesta seção: o problema organizacional
+compreendido pela Engenharia de Processos é redesenhado sob a
+disciplina do BPM, especificado pela Engenharia de Requisitos,
+implementado pela Engenharia de Software em ambiente
+\textit{low-code} e operacionalizado pela automação, com a
+comunicação estruturada entre áreas como resultado observável
+da transformação.

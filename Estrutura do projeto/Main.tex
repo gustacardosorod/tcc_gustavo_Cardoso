@@ -1,0 +1,119 @@
+% =========================================================
+% Template TCC - UNISALES
+% Elaborado por: Gustavo Cardoso Rodrigues
+% Tema: Gestão de Chamados Internos entre Áreas
+% =========================================================
+
+\documentclass[a4paper,12pt]{article}
+
+\input{preambulo}
+
+\begin{document}
+
+% ================= LOGOS =================
+\begin{center}
+\includegraphics[width=0.4\textwidth]{Imagens/ciencia_pratica.png}
+\hspace{1cm}
+\includegraphics[width=0.25\textwidth]{Imagens/Unisales.png}
+\end{center}
+
+\vspace{1cm}
+
+% ================= TÍTULO E AUTORES =================
+\begin{center}
+
+\textbf{Low code na gestão de chamados internos entre áreas (Provisório)}
+
+\vspace{0.3cm}
+
+\textit{LOW CODE IN INTERNAL TICKET MANAGEMENT BETWEEN DEPARTMENTS (PROVISIONAL)}
+
+\vspace{0.8cm}
+
+Gustavo Cardoso Rodrigues\footnote{Centro Universitário Salesiano (UNISALES). Vitória/ES, Brasil.}
+
+\end{center}
+
+\vspace{1cm}
+
+% ================= RESUMO =================
+\textbf{RESUMO:} A ausência de um sistema formalizado para o
+gerenciamento de chamados internos entre áreas gera perda de
+informações, impossibilidade de rastreabilidade e ausência de
+indicadores de desempenho nas organizações que ainda conduzem
+esse fluxo por canais informais. Este trabalho tem como
+objetivo analisar o processo atual de gestão de chamados
+internos entre áreas, levantar requisitos, redesenhar e
+desenvolver um sistema de gestão de chamados, utilizando
+plataformas do ecossistema Microsoft 365, em uma empresa de
+grande porte do setor de serviços de transporte, localizada
+no Estado do Espírito Santo. A solução é estruturada em torno
+de um portal no SharePoint como ponto único de entrada, um
+aplicativo em Power Apps para abertura padronizada dos
+chamados, Power Automate para automação do fluxo e das
+notificações, Microsoft List como repositório centralizado e
+Power BI para geração de indicadores gerenciais. A pesquisa é
+de natureza aplicada, com abordagem qualitativa, conduzida
+como estudo de caso único na organização em que o autor atua
+como assistente de dados, tendo a Engenharia de Processos e o
+\textit{Business Process Management} (BPM) como referenciais
+para a análise do processo atual (AS-IS) e para o redesenho
+do processo futuro (TO-BE) que precede o desenvolvimento da
+solução. Os resultados esperados incluem eliminação da
+comunicação informal entre setores, rastreabilidade integral
+dos chamados, controle de SLA por prioridade e geração de
+indicadores de volume, tempo médio de resolução e causa raiz
+dos problemas.
+ 
+\textbf{Palavras-chave:} Gestão de Chamados Internos;
+Engenharia de Processos; Automação de Processos; Low-Code;
+Microsoft 365; Business Intelligence; BPM; SLA.
+ 
+\vspace{0.08cm}
+ 
+\textbf{ABSTRACT:} The absence of a formal system for managing
+internal tickets between departments causes information loss,
+lack of traceability, and absence of performance indicators in
+organizations that still handle this flow through informal
+channels. This study aims to analyze the current process of
+managing internal tickets between departments, gather
+requirements, redesign the process, and develop a ticket
+management system using Microsoft 365 ecosystem platforms, in
+a large company in the transportation services sector, located
+in the state of Espírito Santo, Brazil. The solution is built
+around a SharePoint portal as the single point of entry, a
+Power Apps application for standardized ticket opening, Power
+Automate for workflow and notification automation, Microsoft
+List as a centralized repository, and Power BI for managerial
+indicators. The research is applied in nature, with a
+qualitative approach, conducted as a single case study in the
+organization where the author works as a data assistant, using
+Process Engineering and Business Process Management (BPM) as
+references for analyzing the current process (AS-IS) and
+redesigning the future process (TO-BE) that precedes the
+development of the solution. Expected results include
+elimination of informal inter-departmental communication, full
+ticket traceability, SLA control by priority, and generation of
+indicators for volume, average resolution time, and root cause
+analysis.
+ 
+\textbf{Keywords:} Internal Ticket Management; Process
+Engineering; Process Automation; Low-Code; Microsoft 365;
+Business Intelligence; BPM; SLA.
+ 
+\vspace{1cm}
+
+% ================= CONTEÚDO =================
+\input{Secoes/Introducao}
+\input{Secoes/Revisao}
+\input{Secoes/Metodologia}
+\input{Secoes/LevantamentoRequisitos}
+\input{Secoes/LevantamentoRequisitos_Desenvolvimento.tex}
+\input{Secoes/Desenvolvimento}
+\input{Secoes/Resultados}
+\input{Secoes/Conclusao}
+
+% ================= REFERÊNCIAS =================
+\printbibliography
+
+\end{document}

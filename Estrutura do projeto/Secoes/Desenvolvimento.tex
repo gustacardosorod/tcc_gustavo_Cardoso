@@ -1,0 +1,438 @@
+\section{Desenvolvimento da Solução}
+
+Esta seção corresponde à etapa de \textit{Automação} do
+ciclo de BPM apresentado na Base Teórica: o processo futuro
+(TO-BE) especificado na seção de Análise e Redesenho do
+Processo é aqui transformado em componentes executáveis do
+ecossistema Microsoft 365, preservando, mesmo em ambiente
+\textit{low-code}, as etapas de arquitetura, implementação e
+validação próprias da Engenharia de Software. O
+desenvolvimento foi realizado com base nos requisitos
+consolidados na etapa anterior e utilizou componentes do
+ecossistema Microsoft 365 já disponível na organização. A
+solução resultante foi estruturada em cinco elementos
+integrados: uma Central de Chamados no SharePoint, um
+aplicativo Canvas no Power Apps para abertura das
+solicitações, uma Microsoft List denominada
+\textit{Chamados} como repositório central, dois fluxos
+principais no Power Automate e uma área de acesso aos
+indicadores gerenciais.
+
+A arquitetura implementada difere parcialmente da
+arquitetura inicialmente descrita na proposta. Na versão
+desenvolvida, o SharePoint atua como portal de acesso,
+enquanto o registro do chamado é realizado por um
+aplicativo Power Apps incorporado à página. O Power Apps
+grava diretamente o novo item na Microsoft List e, a partir
+da criação desse item, o fluxo FL01 é disparado para gerar o
+protocolo e realizar as notificações. Essa alteração
+preservou o SharePoint como ponto único de entrada, porém
+separou a camada de interface da camada de armazenamento,
+permitindo maior controle sobre a experiência do
+solicitante.
+
+\subsection{Arquitetura da Solução Desenvolvida}
+
+A Tabela~\ref{tab:arquitetura-desenvolvida} apresenta os
+componentes efetivamente utilizados e suas responsabilidades
+na versão desenvolvida.
+
+\begin{table}[H]
+\caption{Componentes da arquitetura desenvolvida}
+\label{tab:arquitetura-desenvolvida}
+\centering
+\begin{tabular}{p{3.0cm} p{4.1cm} p{5.1cm}}
+\hline
+\textbf{Componente} & \textbf{Função principal} &
+\textbf{Responsabilidade no fluxo} \\
+\hline
+SharePoint &
+Portal corporativo da solução &
+Centralizar o acesso para abertura de chamado, consulta de
+registros e acesso ao painel gerencial. \\
+\hline
+Power Apps &
+Interface de abertura &
+Coletar os dados do solicitante, validar campos
+obrigatórios, permitir anexos e gravar o novo chamado na
+Microsoft List. \\
+\hline
+Microsoft List &
+Repositório central &
+Armazenar dados de abertura, classificação, responsável,
+tratativa, status, datas e histórico de alterações. \\
+\hline
+Power Automate --- FL01 &
+Automação da abertura &
+Gerar protocolo, inicializar dados do chamado e notificar
+Qualidade/SAC e solicitante. \\
+\hline
+Power Automate --- FL03 &
+Automação da tratativa e encerramento &
+Controlar notificações por mudança de status, transferência
+de responsável, envio para análise, conclusão e
+cancelamento. \\
+\hline
+Power BI &
+Camada gerencial &
+Disponibilizar a visualização dos indicadores e da base
+histórica a partir do portal da Central de Chamados. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor}
+\end{table}
+
+O fluxo lógico da solução pode ser representado pela
+sequência: solicitante acessa o SharePoint, realiza a
+abertura no Power Apps, o registro é persistido na
+Microsoft List, o FL01 gera protocolo e notificações, a
+Qualidade/SAC classifica e direciona o chamado, a área
+responsável realiza a tratativa e o FL03 controla as
+mudanças subsequentes até o encerramento.
+
+\subsection{Central de Chamados no SharePoint}
+
+O SharePoint foi utilizado como camada de apresentação e
+ponto central de acesso ao processo. A página desenvolvida
+apresenta uma identificação institucional da Central de
+Chamados Internos e disponibiliza acessos para abertura de
+novo chamado, consulta dos chamados registrados e acesso ao
+dashboard gerencial. Essa organização concentra em um único
+ambiente as funções que, no processo anterior, estavam
+distribuídas entre SAP Service, mensagens e comunicações
+paralelas.
+
+A utilização do SharePoint como portal também permite que o
+processo seja incorporado ao ambiente corporativo já
+utilizado pelos usuários, reduzindo a necessidade de
+acesso a uma aplicação externa. O formulário de abertura
+foi incorporado à página por meio de um aplicativo Power
+Apps, enquanto a Microsoft List permanece responsável pelo
+armazenamento e pelas etapas internas de classificação,
+tratativa e encerramento.
+
+\subsection{Aplicativo Power Apps para Abertura do Chamado}
+
+A primeira etapa do formulário originalmente prevista
+diretamente na Microsoft List foi substituída por um
+aplicativo Canvas desenvolvido no Power Apps. A mudança foi
+realizada com o objetivo de oferecer uma interface mais
+simples ao solicitante e separar os campos de abertura dos
+campos internos de classificação e tratamento.
+
+O aplicativo foi integrado diretamente à lista
+\textit{Chamados} e configurado para criação de novos
+registros. Na versão analisada, o formulário de abertura
+contém os campos Empresa, Tipo de chamado, Assunto do
+chamado, Problema, Linha, Veículo e Anexos. Empresa, Tipo
+de chamado, Assunto do chamado e Problema foram
+configurados como obrigatórios. O campo Problema utiliza
+entrada de texto em múltiplas linhas, possibilitando uma
+descrição detalhada da ocorrência, enquanto o controle de
+Anexos permite incluir evidências que apoiem a análise.
+
+Os campos de escolha são carregados a partir das opções
+cadastradas na própria Microsoft List, evitando a
+manutenção de listas paralelas no aplicativo. O botão
+\textit{Criar Chamado} utiliza a validação do formulário
+antes do envio, enquanto o botão \textit{Limpar Formulário}
+reinicializa os campos para uma nova entrada.
+
+Após o salvamento bem-sucedido, o aplicativo altera seu
+estado visual e apresenta ao usuário uma confirmação de que
+o chamado foi aberto e está aguardando análise da
+Qualidade/SAC. A mesma tela disponibiliza o botão
+\textit{Novo Chamado}, que limpa o formulário, retorna ao
+modo de criação e permite novo registro. Em caso de falha
+no envio, uma mensagem de erro é apresentada ao usuário.
+
+A interface foi ajustada para uso incorporado em página do
+SharePoint, utilizando contêineres responsivos e dimensões
+baseadas no espaço disponível. Essa adequação buscou
+preservar a legibilidade do formulário quando executado
+dentro do \textit{web part} do Power Apps.
+
+\subsection{Estrutura da Microsoft List}
+
+A Microsoft List denominada \textit{Chamados} constitui o
+repositório central da solução. A estrutura separa os dados
+informados pelo solicitante dos dados preenchidos durante o
+processamento interno.
+
+Na abertura são armazenados, entre outros, Empresa, Tipo de
+chamado, Assunto, Problema, Veículo, Linha, anexos e o
+usuário responsável pela criação do item. Nas etapas
+posteriores são utilizados os campos Prioridade, Área
+Responsável, Tipologia, Responsável pela tratativa, Causa
+raiz, Ação corretiva, Data da Tratativa, Status do Chamado,
+dados de transferência, Data de Fechamento e controle de
+notificação de fechamento.
+
+O registro centralizado permite que todas as etapas
+utilizem o mesmo item como referência, evitando a criação
+de bases paralelas e mantendo o histórico de alterações
+associado ao protocolo. A estrutura também sustenta as
+automações do Power Automate, que consultam alterações de
+campos específicos para identificar quando uma nova ação
+deve ser executada.
+
+\subsection{Fluxo FL01 --- Abertura de Chamados Internos}
+
+O fluxo FL01 é iniciado automaticamente quando um novo item
+é criado na Microsoft List. Sua primeira ação calcula o
+protocolo utilizando o ano corrente e o identificador
+numérico do item. O padrão implementado é
+\texttt{C-AAAA-NNNN}. Assim, um item de identificador 14
+criado em 2026, por exemplo, recebe o protocolo
+\texttt{C-2026-0014}.
+
+Após a geração do protocolo, o próprio item é atualizado.
+Na versão exportada do fluxo, o status inicial é definido
+como \textit{Aberto} e a prioridade é inicialmente
+registrada como \textit{Média}. Em seguida são executadas
+duas notificações distintas.
+
+A primeira notificação é destinada à equipe de
+Qualidade/SAC e informa que um novo chamado aguarda
+classificação. O e-mail apresenta protocolo, solicitante,
+empresa, tipo, assunto, linha, veículo, status e descrição
+do problema, além de um link direto para o item. O objetivo
+é iniciar a etapa de classificação e direcionamento.
+
+A segunda notificação é destinada ao próprio solicitante e
+funciona como confirmação formal de abertura. O e-mail
+informa o número do protocolo, resume os dados registrados,
+indica que a solicitação aguarda análise da Qualidade/SAC e
+fornece o link para acompanhamento do chamado. Com isso, a
+confirmação de abertura deixa de depender de comunicação
+manual.
+
+\subsection{Classificação e Direcionamento pela
+Qualidade/SAC}
+
+Após a abertura, a Qualidade/SAC realiza a classificação
+diretamente no registro da Microsoft List. Nessa etapa são
+definidos os campos Prioridade, Área Responsável, Tipologia
+e Responsável pela tratativa. O status do chamado também é
+controlado pela Qualidade/SAC.
+
+A decisão de manter esses campos fora do formulário do
+solicitante reduz o risco de encaminhamento incorreto e
+formaliza a Qualidade/SAC como instância de triagem. Quando
+o chamado é validado e direcionado para tratamento, o
+status é alterado para \textit{Em tratativa}, iniciando a
+execução das regras do FL03 associadas à atribuição do
+responsável.
+
+A estrutura da lista também contempla o campo Motivo do
+Cancelamento. Quando a Qualidade/SAC decide não prosseguir
+com a solicitação e altera o status para
+\textit{Cancelado}, o motivo registrado passa a compor a
+rastreabilidade do encerramento sem tratativa.
+
+\subsection{Fluxo FL03 --- Tratativa e Encerramento}
+
+O FL03 é disparado quando um item da lista é modificado.
+Inicialmente, o fluxo obtém quais propriedades foram
+alteradas e recupera o estado atual do item. Em seguida,
+uma estrutura de decisão do tipo \textit{Switch} avalia o
+status do chamado e direciona o processamento para o ramo
+correspondente.
+
+No estado \textit{Em tratativa}, o fluxo verifica se houve
+mudança do status para identificar uma nova atribuição.
+Quando essa condição é atendida, o responsável pela
+tratativa recebe uma notificação por e-mail contendo os
+dados necessários e o link para acesso ao chamado.
+
+Ainda no estado \textit{Em tratativa}, o fluxo verifica se
+o campo de responsável foi alterado. Quando ocorre uma
+transferência, o registro é atualizado com informações de
+controle da transferência e o novo responsável é
+notificado. Essa regra foi incorporada após a necessidade
+identificada no levantamento de requisitos de redistribuir
+chamados sem perda de rastreabilidade.
+
+Quando Causa raiz e Ação corretiva são preenchidas e as
+respectivas propriedades são identificadas como alteradas,
+o FL03 atualiza automaticamente o status para
+\textit{Em Análise} e envia uma notificação à
+Qualidade/SAC. A área responsável, portanto, registra a
+tratativa, mas não realiza o encerramento definitivo.
+
+A análise final é responsabilidade da Qualidade/SAC. Após
+avaliar a tratativa, a equipe pode alterar manualmente o
+status para \textit{Concluído} ou, quando aplicável,
+\textit{Cancelado}. No caso de conclusão, o FL03 notifica o
+solicitante e os responsáveis envolvidos e registra a data
+de fechamento.
+
+Para impedir que a própria atualização realizada pelo
+fluxo gere sucessivas notificações de encerramento, foi
+utilizado um campo de controle denominado
+``Notificação de fechamento enviada?''. O ramo de
+conclusão somente envia o e-mail quando esse campo indica
+que a notificação ainda não foi realizada; na sequência, o
+campo é atualizado para \textit{Sim}. Esse mecanismo atua
+como proteção contra reprocessamento e reduz o risco de
+\textit{loop} provocado pelo gatilho de modificação da
+lista.
+
+No ramo \textit{Cancelado}, o solicitante recebe uma
+notificação específica informando que o chamado foi
+cancelado pela Qualidade/SAC. A comunicação apresenta os
+dados do chamado e o motivo do cancelamento registrado no
+item, mantendo o histórico disponível para consulta.
+
+\subsection{Estados do Chamado e Responsabilidades}
+
+A implementação consolidou cinco estados principais:
+\textit{Aberto}, \textit{Em tratativa}, \textit{Em Análise},
+\textit{Concluído} e \textit{Cancelado}. A
+Tabela~\ref{tab:estados-chamado} apresenta a função de cada
+estado.
+
+\begin{table}[H]
+\caption{Estados implementados no fluxo de chamados}
+\label{tab:estados-chamado}
+\centering
+\begin{tabular}{p{2.6cm} p{4.2cm} p{5.5cm}}
+\hline
+\textbf{Status} & \textbf{Responsável predominante} &
+\textbf{Significado no processo} \\
+\hline
+Aberto &
+Qualidade/SAC &
+Chamado registrado e aguardando classificação e
+direcionamento. \\
+\hline
+Em tratativa &
+Área responsável &
+Chamado classificado, atribuído e disponível para registro
+da causa raiz e da ação corretiva. \\
+\hline
+Em Análise &
+Qualidade/SAC &
+Tratativa preenchida pela área responsável e aguardando
+validação antes do encerramento. \\
+\hline
+Concluído &
+Qualidade/SAC &
+Tratativa validada e chamado encerrado, com notificação aos
+envolvidos. \\
+\hline
+Cancelado &
+Qualidade/SAC &
+Chamado encerrado sem continuidade da tratativa, com motivo
+registrado e comunicação ao solicitante. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor}
+\end{table}
+
+\subsection{Rastreabilidade e Notificações}
+
+A rastreabilidade foi implementada por meio da combinação
+entre protocolo único, item persistido na Microsoft List,
+histórico de modificações e notificações vinculadas às
+mudanças de estado. Cada chamado permanece associado ao
+mesmo registro durante todo o ciclo, permitindo recuperar
+os dados de abertura, classificação, responsável, tratativa
+e encerramento.
+
+As notificações foram utilizadas como mecanismo de
+transição entre os responsáveis pelo processo. Na abertura,
+Qualidade/SAC e solicitante são comunicados. Na atribuição
+ou transferência, o responsável pela tratativa é
+notificado. Após o registro da causa raiz e da ação
+corretiva, a Qualidade/SAC recebe a solicitação para
+análise. Na conclusão, solicitante e responsáveis são
+informados do encerramento; no cancelamento, o solicitante
+recebe a justificativa correspondente.
+
+Esse desenho substitui a comunicação paralela utilizada no
+processo anterior por mensagens vinculadas a eventos
+registrados na própria base, reduzindo a dependência de
+grupos de mensagens para informar movimentações do chamado.
+
+\subsection{Aderência da Implementação aos Requisitos}
+
+A análise entre requisitos e componentes desenvolvidos
+demonstrou que a versão atual atende aos elementos centrais
+de centralização, protocolo, classificação, atribuição,
+transferência, tratativa, validação e encerramento.
+Entretanto, alguns requisitos identificados na pesquisa de
+campo não puderam ser confirmados como implementados nos
+artefatos analisados e devem ser tratados como itens de
+evolução ou de validação antes da conclusão definitiva do
+projeto.
+
+\begin{table}[H]
+\caption{Aderência dos principais requisitos à versão desenvolvida}
+\label{tab:aderencia-requisitos}
+\centering
+\begin{tabular}{p{1.2cm} p{6.6cm} p{4.4cm}}
+\hline
+\textbf{ID} & \textbf{Requisito} &
+\textbf{Situação observada} \\
+\hline
+RF01--RF14 &
+Centralização, abertura, protocolo, notificações,
+classificação, atribuição, transferência, tratativa,
+análise e encerramento. &
+Implementados nos componentes SharePoint, Power Apps,
+Microsoft List, FL01 e FL03. \\
+\hline
+RF15 &
+Controle automático de SLA por tipo e prioridade. &
+Requisito identificado na pesquisa, porém o cálculo
+automático não foi evidenciado nos fluxos exportados
+analisados. \\
+\hline
+RF16 &
+Comentários, atualizações e justificativas durante
+tratativas prolongadas. &
+Necessidade registrada pela Supervisora; não foi
+identificado campo específico na estrutura final analisada. \\
+\hline
+RF17 &
+Quantidade de protocolos relacionados. &
+Requisito informado pela Analista; não foi identificado no
+formulário final de abertura analisado. \\
+\hline
+RF18 &
+Tipologias reutilizáveis. &
+Implementado na etapa de classificação da Microsoft List. \\
+\hline
+RF19 &
+Indicadores gerenciais. &
+A Central de Chamados possui acesso ao dashboard; a
+validação detalhada das métricas deve ser realizada na
+etapa de avaliação dos resultados. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor}
+\end{table}
+
+Outro ponto de aderência parcial está na regra de
+priorização. A pesquisa de campo indicou prioridade Alta
+para chamados Massivos e Média para chamados Internos.
+Entretanto, na versão exportada do FL01, todo novo chamado
+é inicialmente atualizado com prioridade Média, ficando a
+classificação definitiva sob responsabilidade da
+Qualidade/SAC. Dessa forma, a regra de prioridade por tipo
+não está automatizada no momento analisado.
+
+Esses itens não invalidam o fluxo principal desenvolvido,
+mas representam diferenças entre os requisitos levantados
+e a versão implementada. O registro explícito dessas
+diferenças é importante para a avaliação acadêmica da
+solução, pois permite distinguir funcionalidades
+efetivamente entregues de requisitos planejados ou
+reservados para evolução.

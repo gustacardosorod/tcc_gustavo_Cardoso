@@ -1,0 +1,305 @@
+\section{Metodologia}
+
+\subsection{Caracterização da Pesquisa}
+
+Quanto à natureza, a presente pesquisa é classificada como
+\textbf{aplicada}, pois busca gerar conhecimento voltado à
+solução de um problema real identificado em uma organização
+\cite{Gil2002}: o objetivo é analisar o processo atual,
+levantar os requisitos, redesenhar e modelar o processo, e
+propor a automação de um sistema de gestão de chamados
+internos entre áreas, tendo como ponto de entrada um site no
+SharePoint e como componentes de automação ferramentas do
+ecossistema Microsoft 365.
+
+Quanto à abordagem, a pesquisa é \textbf{qualitativa}, uma
+vez que busca compreender as necessidades do contexto
+organizacional a partir da perspectiva dos profissionais
+diretamente envolvidos no processo, transformando essas
+necessidades em requisitos para o redesenho e o
+desenvolvimento de uma solução computacional \cite{Gil2002}.
+
+Quanto ao método, a pesquisa caracteriza-se como
+\textbf{estudo de caso}, pois analisa um processo específico
+--- a gestão de chamados internos entre áreas --- dentro de
+uma organização determinada, e desenvolve uma solução
+direcionada ao contexto estudado \cite{Gil2002}. Quanto aos
+objetivos, a pesquisa é \textbf{exploratória e descritiva}:
+exploratória, por investigar a aplicação integrada da
+Engenharia de Processos, do BPM e do ecossistema Microsoft
+365 na gestão de chamados internos entre áreas; descritiva,
+por documentar os requisitos levantados junto aos
+participantes, a arquitetura desenvolvida e os resultados
+obtidos na avaliação da solução \cite{Santos2023}.
+
+O delineamento adotado é o de \textbf{pesquisa de campo}, uma
+vez que a coleta de dados ocorre diretamente no ambiente
+organizacional, por meio de um formulário estruturado (Google
+Forms) aplicado aos profissionais responsáveis pelo processo
+estudado \cite{Gil2002}. Essa escolha permite capturar as
+necessidades reais do processo a partir de quem o opera
+diariamente, garantindo que os requisitos da solução reflitam
+a realidade da organização, além de possibilitar a validação
+de todo o fluxo interno da futura automação a partir de
+diferentes níveis de atuação dos respondentes.
+
+\subsection{Participantes da Pesquisa}
+
+Os participantes foram selecionados por critério de
+intencionalidade, considerando o papel de cada um no processo
+de gestão de chamados internos da organização. São três
+profissionais da área de Qualidade:
+
+\begin{itemize}
+    \item \textbf{Gerente da Área} --- responsável por
+    validar a aderência do fluxo proposto aos objetivos
+    estratégicos, os benefícios esperados, a viabilidade da
+    solução e aprovar o fluxo final;
+
+    \item \textbf{Supervisora de Qualidade} --- responsável
+    por validar a aderência do processo, as regras
+    operacionais, as necessidades do setor, os impactos na
+    rotina da equipe e as prioridades do fluxo;
+
+    \item \textbf{Analista de Qualidade} --- responsável por
+    descrever o processo atual, as atividades executadas, as
+    dificuldades encontradas, as regras do processo, as
+    funcionalidades esperadas da automação e as melhorias
+    desejadas.
+\end{itemize}
+
+A escolha desses três perfis garante que o levantamento de
+requisitos abranja as perspectivas estratégica, operacional e
+técnica do processo, permitindo especificar uma solução que
+atenda às necessidades de todos os níveis de uso. A divisão
+das perguntas do formulário conforme o nível de atuação de
+cada participante busca aumentar a qualidade dos requisitos
+levantados e validar o fluxo proposto em diferentes níveis
+organizacionais.
+
+\subsection{Instrumento de Coleta de Dados}
+
+A coleta de dados foi realizada por meio de um
+\textbf{formulário estruturado}, elaborado na ferramenta
+\textbf{Google Forms} e aplicado individualmente a cada um dos
+três participantes. O formulário foi organizado em seções,
+com um bloco de perguntas comuns a todos os respondentes e
+blocos específicos direcionados conforme o nível de atuação
+do participante (Analista, Supervisora ou Gerente), de modo
+que cada perfil respondesse apenas às questões relacionadas ao
+seu nível de responsabilidade.
+
+O formulário abordou os seguintes eixos temáticos:
+funcionamento atual do processo de comunicação de problemas
+entre áreas; principais dificuldades enfrentadas na ausência
+de um sistema formalizado; oportunidades de melhoria; regras
+de negócio e exceções do processo; atividades executadas
+manualmente; campos e informações consideradas essenciais no
+registro de um chamado; critérios de priorização e prazos
+esperados para resolução; funcionalidades esperadas da
+automação; e validação do fluxo proposto em cada nível
+organizacional.
+
+As respostas coletadas foram exportadas e analisadas por meio
+de análise de conteúdo, com agrupamento em categorias
+temáticas que originaram os requisitos funcionais e não
+funcionais da solução, posteriormente priorizados pela
+técnica MoSCoW e validados pelo orientador.
+
+\subsection{Aspectos Éticos}
+
+A participação no formulário foi voluntária e precedida de
+uma seção de apresentação da pesquisa e de consentimento
+informado, na qual o participante é esclarecido sobre os
+objetivos do levantamento e concorda em responder antes de
+prosseguir. As informações coletadas referem-se exclusivamente
+ao processo organizacional em análise --- funcionamento do
+fluxo, dificuldades, regras de negócio e expectativas quanto à
+automação --- não envolvendo dados pessoais sensíveis. Os
+participantes são identificados no trabalho apenas pelo
+cargo, sem exposição de dados que permitam sua identificação
+individual.
+
+Como limitação, destaca-se que os resultados refletem as
+características específicas da organização estudada e a
+perspectiva dos três participantes selecionados, não podendo
+ser generalizados automaticamente para outros contextos
+organizacionais, condição inerente ao delineamento de estudo
+de caso \cite{Gil2002}.
+
+\subsection{Etapas da Pesquisa}
+
+Em coerência com o ciclo de BPM apresentado na Base Teórica
+--- identificação, modelagem, análise, redesenho, automação e
+monitoramento --- a pesquisa foi estruturada em seis etapas
+sequenciais, apresentadas a seguir.
+
+\subsubsection{Etapa 1 --- Diagnóstico do Processo Atual e
+Revisão de Literatura}
+
+Análise do processo existente de comunicação de chamados
+internos (processo AS-IS), conduzida em paralelo à revisão de
+literatura nas bases Google Scholar, SciELO e Portal de
+Periódicos CAPES, com descritores relacionados a engenharia
+de processos, BPM, engenharia de requisitos, automação de
+processos, plataformas \textit{low-code}, Microsoft 365,
+Microsoft List, Power Automate, Power BI e SLA. O objetivo é
+construir a fundamentação teórica que embasa o redesenho e o
+desenvolvimento da solução proposta.
+
+\subsubsection{Etapa 2 --- Levantamento de Informações via
+Google Forms}
+
+Aplicação do formulário estruturado no Google Forms aos três
+participantes da área de Qualidade (Analista, Supervisora e
+Gerente), com perguntas direcionadas conforme o nível de
+atuação de cada perfil. As respostas coletadas foram
+analisadas e consolidadas em requisitos funcionais e não
+funcionais, priorizados pela técnica MoSCoW (\textit{Must
+Have, Should Have, Could Have} e \textit{Won't Have}), e
+validados pelo orientador.
+
+\subsubsection{Etapa 3 --- Especificação dos Requisitos}
+
+Transformação das necessidades relatadas pelos participantes
+em requisitos funcionais, requisitos não funcionais e regras
+de negócio, seguindo a lógica necessidade~$\rightarrow$~análise~
+$\rightarrow$~requisito discutida na Base Teórica, com base
+nos conceitos de Engenharia de Requisitos.
+
+\subsubsection{Etapa 4 --- Modelagem do Processo Futuro
+(TO-BE)}
+
+Redesenho do fluxo de gestão de chamados a partir dos
+requisitos especificados, definindo os estados possíveis do
+chamado, os critérios de prioridade, o tempo de SLA associado
+a cada prioridade e as responsabilidades de cada ator do
+processo, segundo a disciplina do BPM.
+
+\subsubsection{Etapa 5 --- Desenvolvimento e Implantação do
+Fluxo}
+
+Com base no processo redesenhado, foi desenvolvido o site no
+SharePoint responsável por centralizar o acesso à abertura dos
+chamados, com os campos, status e critérios de prioridade
+definidos na etapa anterior. Em paralelo, foi desenvolvido o
+fluxo de automação no Power Automate (geração de protocolo,
+notificações e contagem de SLA) e estruturada a Microsoft
+List como repositório centralizado. O fluxo foi implantado em
+ambiente de testes para verificação do funcionamento
+integrado dos componentes, e consolidados os indicadores no
+painel gerencial do Power BI (volume de chamados, tempo médio
+de resolução, percentual dentro do SLA e distribuição por
+área e por prioridade).
+
+\subsubsection{Etapa 6 --- Validação e Consolidação dos
+Resultados}
+
+Acompanhamento da validação do processo em uso junto aos
+participantes envolvidos, com a consolidação dos dados e
+indicadores gerados pelo Power BI. Os resultados são
+analisados e confrontados com a hipótese da pesquisa,
+discutindo-se à luz da fundamentação teórica a aderência da
+proposta às necessidades identificadas nos três níveis
+organizacionais consultados.
+
+\begin{table}[H]
+\caption{Síntese das etapas da pesquisa}
+\label{tab:etapas}
+\centering
+\begin{tabular}{p{0.5cm} p{3.6cm} p{3.6cm} p{4.4cm}}
+\hline
+\textbf{N} & \textbf{Etapa} & \textbf{Fonte/Método} &
+\textbf{Produto Gerado} \\
+\hline
+1 & Diagnóstico do processo atual e revisão de literatura &
+Análise do processo (AS-IS) e bases científicas &
+Fundamentação teórica e caracterização do problema \\
+\hline
+2 & Levantamento de informações & Formulário Google Forms
+com 3 participantes & Necessidades organizacionais
+consolidadas \\
+\hline
+3 & Especificação dos requisitos & Análise de conteúdo e
+técnica MoSCoW & Requisitos funcionais e não funcionais \\
+\hline
+4 & Modelagem do processo futuro (TO-BE) & Redesenho segundo
+o ciclo de BPM & Fluxo, estados e regras de negócio
+definidos \\
+\hline
+5 & Desenvolvimento e implantação & SharePoint + Power Apps +
+Power Automate + Microsoft List + Power BI & Fluxo implantado
+e dashboard lançado \\
+\hline
+6 & Validação e consolidação dos resultados & Análise
+qualitativa junto aos participantes & Resultados e conclusões \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor}
+\end{table}
+
+\subsection{Cronograma}
+
+O cronograma da pesquisa está estruturado em cinco fases
+mensais, distribuídas entre julho e novembro do ano de
+execução, conforme descrito na Tabela~\ref{tab:cronograma}.
+As Etapas 1 a 4 da pesquisa (diagnóstico, levantamento,
+especificação e modelagem) concentram-se no mês de julho; as
+Etapas 5 e 6 (desenvolvimento/implantação e
+validação/consolidação) correspondem, respectivamente, aos
+meses de agosto/setembro e outubro/novembro.
+
+\begin{table}[H]
+\caption{Cronograma de execução da pesquisa}
+\label{tab:cronograma}
+\centering
+\begin{tabular}{p{1.5cm} p{3.5cm} p{7cm}}
+\hline
+\textbf{Mês} & \textbf{Fase} & \textbf{Atividades} \\
+\hline
+Julho &
+Diagnóstico, levantamento, especificação e modelagem &
+Análise do processo atual (AS-IS); elaboração e validação do
+formulário no Google Forms; aplicação aos três participantes
+(Gerente, Supervisora e Analista de Qualidade); análise de
+conteúdo das respostas; especificação dos requisitos
+funcionais e não funcionais; redesenho do processo futuro
+(TO-BE); validação pelo orientador. \\
+\hline
+Agosto &
+Desenvolvimento e implantação do fluxo &
+Desenvolvimento do site no SharePoint como ponto de entrada
+dos chamados; configuração dos campos obrigatórios, status e
+critérios de prioridade; desenvolvimento do fluxo de
+automação no Power Automate (geração de protocolo,
+notificações e contagem de SLA); estruturação da Microsoft
+List; implantação do fluxo em ambiente de testes. \\
+\hline
+Setembro &
+Consolidação, indicadores e lançamento &
+Consolidação da integração entre o site no SharePoint e os
+demais componentes do ecossistema Microsoft 365; criação dos
+indicadores e construção do painel gerencial no Power BI;
+lançamento do dashboard do Power BI na primeira semana do
+mês; lançamento e início da validação do novo modelo do
+processo junto aos participantes. \\
+\hline
+Outubro &
+Validação e consolidação dos resultados &
+Acompanhamento da validação do processo em uso; consolidação
+dos dados e indicadores gerados; análise preliminar dos
+resultados frente à hipótese da pesquisa. \\
+\hline
+Novembro &
+Validação e consolidação dos resultados (continuação) &
+Consolidação final dos resultados e da documentação técnica;
+redação dos resultados e discussão; revisão final do trabalho
+e preparação para a apresentação. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor}
+\end{table}

@@ -1,0 +1,382 @@
+\section{Levantamento de Requisitos}
+
+Em coerência com a Engenharia de Requisitos discutida na Base
+Teórica, o levantamento apresentado nesta seção corresponde
+às etapas de \textit{Análise} do ciclo de BPM: a partir do
+diagnóstico do processo atual, busca-se identificar os
+gargalos operacionais e transformá-los em requisitos capazes
+de orientar o redesenho do processo, apresentado na seção
+seguinte. O levantamento de requisitos foi realizado a partir
+das respostas do formulário estruturado aplicado aos três
+participantes definidos na metodologia: uma Analista de
+Qualidade e Clientes, uma Supervisora de Qualidade e um
+Gerente da Área. Os três participantes registraram
+concordância voluntária com a pesquisa. As perguntas foram
+segmentadas conforme o nível de atuação, de modo que os
+campos sem resposta nos blocos específicos não representam
+omissão, mas sim questões direcionadas a outro perfil
+organizacional.
+
+A análise das respostas foi conduzida por agrupamento
+temático, considerando cinco eixos: processo atual,
+dificuldades e riscos, regras de negócio, funcionalidades
+esperadas e benefícios gerenciais. A partir desses eixos,
+as necessidades relatadas foram convertidas em requisitos
+funcionais, requisitos não funcionais e regras de negócio.
+Para a priorização foi utilizada a técnica MoSCoW,
+considerando como \textit{Must Have} os requisitos
+necessários para que o fluxo opere com rastreabilidade e
+governança mínimas, como \textit{Should Have} aqueles que
+aumentam a qualidade operacional sem impedir a operação
+básica, e como \textit{Could Have} as funcionalidades de
+evolução que podem ser incorporadas em ciclos posteriores.
+
+\subsection{Diagnóstico do Processo Atual}
+
+A resposta da Analista de Qualidade e Clientes permitiu
+caracterizar o processo operacional utilizado antes da
+solução proposta. Os chamados internos eram registrados no
+SAP Service, ferramenta também utilizada como CRM para
+atendimentos e reclamações de clientes externos. Para
+viabilizar esse registro, as ocorrências internas eram
+associadas a um cadastro denominado ``Experiência do
+Cliente'', no qual era criado um ticket e realizado o
+direcionamento à área responsável. Paralelamente ao registro
+no sistema, a chegada do chamado era comunicada manualmente
+aos responsáveis por meio de um grupo de WhatsApp.
+
+Esse modelo apresentava duas fragilidades centrais. A
+primeira estava relacionada à mistura, em um mesmo ambiente,
+de chamados internos e manifestações externas de clientes,
+o que poderia distorcer a leitura de volumes e dificultar a
+governança das ocorrências internas. A segunda estava
+relacionada à dependência de atividades manuais para
+comunicação e acompanhamento, especialmente quanto à
+obtenção de retorno das áreas responsáveis.
+
+A Analista também diferenciou os dois tipos de chamado
+utilizados no processo. O chamado interno corresponde a uma
+problemática organizacional que necessita de análise e
+tratativa por outra área. O chamado massivo corresponde a
+uma ocorrência de mesmo problema capaz de impactar três ou
+mais clientes, normalmente associada a falhas técnicas ou
+sistêmicas com maior potencial de impacto. Essa distinção
+passou a ser considerada na modelagem do processo e nas
+regras de priorização.
+
+Na perspectiva da Supervisora de Qualidade, a proposta de
+um ambiente específico para registro e acompanhamento foi
+considerada aderente às necessidades operacionais. A
+respondente destacou como benefícios esperados a maior
+agilidade no direcionamento, a rastreabilidade das
+tratativas, a simplificação do processo em comparação ao
+SAP Service, a notificação imediata da área responsável e a
+possibilidade de consolidação das informações para análise
+gerencial. Como pontos de atenção, foram identificadas a
+necessidade de registrar atualizações ou justificativas
+quando a solução depender de fatores externos e a
+necessidade de permitir a transferência do chamado quando o
+responsável inicialmente definido não for o correto.
+
+Na perspectiva gerencial, foram confirmadas como principais
+fricções a dificuldade de governança dos chamados internos,
+a falta de padronização dos registros e do direcionamento e
+a dificuldade das áreas executoras em visualizar suas
+pendências. O Gerente da Área avaliou que o fluxo proposto
+possui aderência aos objetivos estratégicos da gerência e
+da organização, destacando como benefícios esperados a
+rastreabilidade, a padronização, a disponibilidade de
+indicadores gerenciais e a redução do tempo de resolução.
+O fluxo foi aprovado, em princípio, sem ressalvas.
+
+A Tabela~\ref{tab:sintese-levantamento} sintetiza as
+contribuições de cada perfil para a especificação da
+solução.
+
+\begin{table}[H]
+\caption{Síntese do levantamento de requisitos por perfil}
+\label{tab:sintese-levantamento}
+\centering
+\begin{tabular}{p{2.4cm} p{5cm} p{5cm}}
+\hline
+\textbf{Perfil} & \textbf{Principais evidências} &
+\textbf{Implicações para a solução} \\
+\hline
+Analista de Qualidade e Clientes &
+Uso do SAP Service para ocorrências internas e externas;
+comunicação complementar por WhatsApp; dificuldade de
+retorno; necessidade de protocolo, evidências, regras,
+causa raiz, solução, SLA e indicadores. &
+Criar canal próprio; padronizar a abertura; gerar protocolo;
+automatizar notificações; registrar causa raiz e ação;
+separar chamados internos de manifestações externas. \\
+\hline
+Supervisora de Qualidade &
+Necessidade de classificação e solução por prazo;
+rastreabilidade; transferência de responsável; registro de
+atualizações e justificativas quando o SLA não puder ser
+cumprido. &
+Definir papéis de classificação; controlar mudança de
+responsável; manter histórico; prever mecanismo de
+justificativa e acompanhamento; estruturar regras de SLA. \\
+\hline
+Gerente da Área &
+Dificuldade de governança, padronização e acesso às
+pendências; necessidade de indicadores; aprovação do fluxo
+proposto. &
+Centralizar os registros; disponibilizar visão gerencial;
+priorizar volume, tempo médio de resolução e distribuição
+por área; garantir aderência ao processo organizacional. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor
+com base na pesquisa de campo}
+\end{table}
+
+\subsection{Requisitos Funcionais}
+
+Os requisitos funcionais representam os serviços que a
+solução deve disponibilizar aos usuários e às áreas
+envolvidas no processo. A Tabela~\ref{tab:requisitos-funcionais}
+apresenta os requisitos consolidados a partir das respostas
+dos participantes.
+
+\begin{table}[H]
+\caption{Requisitos funcionais da solução}
+\label{tab:requisitos-funcionais}
+\centering
+\begin{tabular}{p{1.0cm} p{8.7cm} p{2.3cm}}
+\hline
+\textbf{ID} & \textbf{Requisito funcional} &
+\textbf{Prioridade} \\
+\hline
+RF01 & Disponibilizar um canal único e específico para
+abertura de chamados internos, separado do ambiente de
+reclamações externas de clientes. & Must Have \\
+\hline
+RF02 & Permitir que usuários autorizados de diferentes
+áreas registrem novos chamados internos. & Must Have \\
+\hline
+RF03 & Permitir a identificação do tipo de chamado,
+diferenciando, no mínimo, chamados Internos e Massivos. &
+Must Have \\
+\hline
+RF04 & Registrar de forma padronizada as informações
+necessárias à abertura, incluindo empresa, tipo, assunto,
+descrição do problema e evidências, além de dados
+operacionais aplicáveis ao caso. & Must Have \\
+\hline
+RF05 & Gerar automaticamente um número único de protocolo
+para cada chamado registrado. & Must Have \\
+\hline
+RF06 & Confirmar a abertura ao solicitante e informar o
+protocolo e o link de acesso ao registro. & Must Have \\
+\hline
+RF07 & Notificar a equipe de Qualidade/SAC sobre novos
+chamados que aguardam classificação e direcionamento. &
+Must Have \\
+\hline
+RF08 & Permitir à Qualidade/SAC definir prioridade, área
+responsável, tipologia, responsável pela tratativa e status
+do chamado. & Must Have \\
+\hline
+RF09 & Notificar automaticamente o responsável quando um
+chamado for atribuído para sua tratativa. & Must Have \\
+\hline
+RF10 & Permitir a transferência do chamado para outro
+responsável, preservando a rastreabilidade da alteração. &
+Must Have \\
+\hline
+RF11 & Permitir o registro de causa raiz e ação corretiva
+pela área responsável pela tratativa. & Must Have \\
+\hline
+RF12 & Encaminhar o chamado tratado para análise da
+Qualidade/SAC antes do encerramento definitivo. &
+Must Have \\
+\hline
+RF13 & Permitir à Qualidade/SAC concluir ou cancelar o
+chamado, registrando o motivo do cancelamento quando
+aplicável. & Must Have \\
+\hline
+RF14 & Notificar o solicitante e os responsáveis quando o
+chamado for concluído ou cancelado. & Must Have \\
+\hline
+RF15 & Controlar os prazos de classificação e solução de
+acordo com o tipo e a prioridade do chamado, possibilitando
+o acompanhamento do SLA. & Must Have \\
+\hline
+RF16 & Permitir o registro de comentários, atualizações ou
+justificativas para chamados cuja tratativa dependa de
+fatores externos ou ultrapasse o prazo inicialmente
+definido. & Should Have \\
+\hline
+RF17 & Permitir o registro da quantidade de protocolos
+relacionados quando a ocorrência afetar múltiplos clientes
+ou registros. & Should Have \\
+\hline
+RF18 & Disponibilizar categorias ou tipologias reutilizáveis
+para apoiar a classificação e a análise de recorrências. &
+Should Have \\
+\hline
+RF19 & Disponibilizar indicadores gerenciais de volume,
+tempo médio de resolução, distribuição por área, tipos de
+problema, chamados tratados e cumprimento de SLA. &
+Must Have \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor
+com base na pesquisa de campo}
+\end{table}
+
+\subsection{Requisitos Não Funcionais}
+
+Além das funcionalidades, o levantamento evidenciou
+características de qualidade necessárias para que a solução
+seja incorporada à rotina organizacional. Esses requisitos
+estão apresentados na Tabela~\ref{tab:requisitos-nao-funcionais}.
+
+\begin{table}[H]
+\caption{Requisitos não funcionais da solução}
+\label{tab:requisitos-nao-funcionais}
+\centering
+\begin{tabular}{p{1.1cm} p{8.5cm} p{2.4cm}}
+\hline
+\textbf{ID} & \textbf{Requisito não funcional} &
+\textbf{Prioridade} \\
+\hline
+RNF01 & A solução deve centralizar os registros em uma fonte
+única e permitir rastreabilidade desde a abertura até o
+encerramento. & Must Have \\
+\hline
+RNF02 & A interface de abertura deve ser simples, objetiva e
+adequada ao uso em ambiente corporativo, reduzindo o número
+de etapas necessárias para registrar uma ocorrência. &
+Must Have \\
+\hline
+RNF03 & A solução deve utilizar, prioritariamente, os
+recursos do ecossistema Microsoft 365 já adotado pela
+organização, favorecendo integração e manutenção. &
+Must Have \\
+\hline
+RNF04 & O acesso aos registros e às ações do processo deve
+respeitar as permissões corporativas e os diferentes papéis
+de solicitante, Qualidade/SAC e área responsável. &
+Must Have \\
+\hline
+RNF05 & As alterações relevantes de status, responsável,
+tratativa e encerramento devem permanecer auditáveis no
+histórico do registro. & Must Have \\
+\hline
+RNF06 & As automações devem evitar notificações duplicadas e
+reprocessamentos causados pelas próprias atualizações
+realizadas no item. & Must Have \\
+\hline
+RNF07 & A interface incorporada ao SharePoint deve adaptar-se
+ao espaço disponível na página, preservando legibilidade e
+usabilidade. & Should Have \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor}
+\end{table}
+
+\subsection{Regras de Negócio}
+
+As respostas da pesquisa permitiram definir regras
+operacionais que orientam o comportamento do fluxo e a
+distribuição de responsabilidades entre os participantes.
+A Tabela~\ref{tab:regras-negocio} apresenta as principais
+regras identificadas.
+
+\begin{table}[H]
+\caption{Regras de negócio identificadas}
+\label{tab:regras-negocio}
+\centering
+\begin{tabular}{p{1.0cm} p{10.9cm}}
+\hline
+\textbf{ID} & \textbf{Regra de negócio} \\
+\hline
+RN01 & Todo chamado deve ser registrado assim que a
+problemática for identificada, garantindo rastreabilidade
+desde o início do processo. \\
+\hline
+RN02 & A Qualidade/SAC é responsável pela classificação e
+pelo direcionamento inicial do chamado para a área
+responsável pela tratativa. \\
+\hline
+RN03 & Chamados Massivos devem possuir tratamento mais
+restritivo em razão do potencial impacto sobre maior
+quantidade de clientes e indicadores. \\
+\hline
+RN04 & Na pesquisa de campo, a classificação proposta para
+Chamados Massivos foi Alta e para Chamados Internos foi
+Média. \\
+\hline
+RN05 & A classificação inicial de um Chamado Massivo deve
+ocorrer em até 30 minutos após a abertura; para Chamados
+Internos, em até um dia após a abertura. \\
+\hline
+RN06 & A solução de um Chamado Massivo deve ocorrer em até
+24 horas após a classificação; para Chamados Internos, em
+até três dias após a classificação. \\
+\hline
+RN07 & A área responsável deve registrar, no mínimo, a causa
+raiz identificada e a ação corretiva adotada antes de
+submeter a tratativa para análise da Qualidade/SAC. \\
+\hline
+RN08 & A conclusão definitiva do chamado deve ser realizada
+pela Qualidade/SAC após análise da tratativa registrada pela
+área responsável. \\
+\hline
+RN09 & Quando houver transferência de responsável, a
+alteração deve preservar a rastreabilidade do chamado e
+notificar o novo responsável. \\
+\hline
+RN10 & Em situações extraordinárias de impacto imediato,
+como indisponibilidade generalizada de sistemas, o processo
+deve permitir tratamento prioritário sem impedir o registro
+formal da ocorrência. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor
+com base na pesquisa de campo}
+\end{table}
+
+\subsection{Decisões de Modelagem Derivadas dos Requisitos}
+
+Durante a transformação dos requisitos em solução, algumas
+decisões de modelagem foram adotadas para reduzir erros de
+direcionamento e separar responsabilidades. Embora a
+Analista tenha indicado ``Área responsável'' entre as
+informações desejáveis na abertura, a mesma respondente
+também solicitou que a área de Clientes/Qualidade atuasse
+como filtro interno para identificar o destino correto.
+A Supervisora, por sua vez, apontou a necessidade de
+transferência quando o direcionamento inicial estivesse
+incorreto. Em razão dessa convergência, a definição da área
+responsável, da prioridade, da tipologia e do responsável
+pela tratativa foi posicionada na etapa de classificação,
+sob responsabilidade da Qualidade/SAC, e não no formulário
+inicial do solicitante.
+
+Também foi estabelecida uma etapa intermediária entre a
+tratativa e o encerramento. Após o preenchimento da causa
+raiz e da ação corretiva, o chamado deve retornar para
+análise da Qualidade/SAC. Essa decisão atende à necessidade
+de obrigatoriedade de posicionamento, análise de causa e
+solução indicada no levantamento e impede que a própria área
+responsável encerre diretamente um chamado sem validação.
+
+Por fim, o levantamento demonstrou que a automação não deve
+ser compreendida apenas como mecanismo de registro. A
+necessidade de governança, rastreabilidade e indicadores
+foi recorrente nos três níveis consultados, tornando a
+centralização dos dados e a manutenção de um histórico
+estruturado elementos centrais da solução.

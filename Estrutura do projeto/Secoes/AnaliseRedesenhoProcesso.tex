@@ -1,0 +1,144 @@
+\section{Análise e Redesenho do Processo}
+
+Esta seção materializa a etapa de \textit{Redesenho} do ciclo
+de BPM apresentado na Base Teórica, articulando o diagnóstico
+do processo atual (AS-IS), descrito na seção de Levantamento
+de Requisitos, com a especificação do processo futuro
+(TO-BE), que orienta o desenvolvimento da solução apresentado
+na seção seguinte. O objetivo não é apenas contrastar duas
+representações do fluxo, mas evidenciar, campo a campo,
+decisão a decisão, a origem de cada mudança nos requisitos
+levantados junto aos três perfis consultados.
+
+\subsection{Processo Atual (AS-IS)}
+
+O diagnóstico consolidado a partir das respostas da Analista,
+da Supervisora e do Gerente caracteriza um processo
+descentralizado e dependente de controles manuais. Os
+chamados internos eram registrados no SAP Service --- mesma
+ferramenta utilizada como CRM para atendimentos e reclamações
+de clientes externos ---, misturando ocorrências internas e
+manifestações externas em um único ambiente. A chegada do
+chamado era comunicada paralelamente por um grupo de
+WhatsApp, sem protocolo automático, sem controle de prazo e
+sem visibilidade gerencial sobre volume, prioridade ou tempo
+de resolução. O Quadro~\ref{quadro:as-is} sintetiza as
+características centrais do processo atual.
+
+\begin{table}[H]
+\caption{Características do processo atual (AS-IS)}
+\label{quadro:as-is}
+\centering
+\begin{tabular}{p{3.6cm} p{8.2cm}}
+\hline
+\textbf{Dimensão} & \textbf{Situação observada} \\
+\hline
+Canal de abertura & Cadastro ``Experiência do Cliente'' no
+SAP Service, compartilhado com manifestações externas de
+clientes. \\
+\hline
+Comunicação & Complementar e manual, por grupo de WhatsApp,
+sem registro formal do repasse. \\
+\hline
+Controle de prazo & Inexistente; sem SLA definido ou
+monitorado. \\
+\hline
+Rastreabilidade & Baixa; mistura entre chamados internos e
+externos dificulta a leitura de volumes. \\
+\hline
+Responsabilidade & Informal; dependência de retorno manual
+das áreas responsáveis. \\
+\hline
+Indicadores & Inexistentes; ausência de base para gestão
+baseada em dados. \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor com
+base na pesquisa de campo}
+\end{table}
+
+\subsection{Processo Futuro (TO-BE)}
+
+O processo redesenhado responde a cada uma das fragilidades
+identificadas no AS-IS, substituindo controles manuais por
+regras automatizadas e centralizando o registro em uma única
+fonte de dados. O Quadro~\ref{quadro:to-be} apresenta a
+transformação proposta, dimensão a dimensão, em correspondência
+direta com o Quadro~\ref{quadro:as-is}.
+
+\begin{table}[H]
+\caption{Transformação do processo: AS-IS para TO-BE}
+\label{quadro:to-be}
+\centering
+\begin{tabular}{p{3.0cm} p{4.9cm} p{4.9cm}}
+\hline
+\textbf{Dimensão} & \textbf{AS-IS} & \textbf{TO-BE} \\
+\hline
+Canal de abertura & Cadastro compartilhado no SAP Service &
+Site no SharePoint com aplicativo Power Apps próprio para
+chamados internos \\
+\hline
+Comunicação & Grupo de WhatsApp, sem registro & Notificações
+automáticas por e-mail, vinculadas a eventos da Microsoft
+List \\
+\hline
+Controle de prazo & Inexistente & SLA por tipo e prioridade,
+com contagem automatizada \\
+\hline
+Rastreabilidade & Baixa, dados misturados & Protocolo único,
+histórico centralizado na Microsoft List \\
+\hline
+Responsabilidade & Informal & Classificação e atribuição
+explícita pela Qualidade/SAC, com transferência rastreável \\
+\hline
+Indicadores & Inexistentes & Painel gerencial no Power BI
+(volume, tempo médio, cumprimento de SLA) \\
+\hline
+\end{tabular}
+\raggedright
+\par
+{\fontsize{10}{12}\selectfont Fonte: Elaborado pelo autor}
+\end{table}
+
+\subsection{Decisões de Redesenho}
+
+A transição entre os dois estados do processo não decorreu da
+transposição direta do fluxo manual para um ambiente digital,
+mas de decisões de redesenho fundamentadas nos requisitos
+levantados. Duas decisões merecem destaque.
+
+A primeira separa o registro de chamados internos das
+manifestações externas de clientes, respondendo diretamente à
+fragilidade central identificada pela Analista no processo
+AS-IS. Essa separação é também uma decisão de Engenharia de
+Processos: ao isolar o fluxo interno em um canal próprio, a
+organização ganha capacidade de leitura de volumes e de
+governança que o modelo anterior não permitia.
+
+A segunda desloca a definição de área responsável, prioridade,
+tipologia e responsável pela tratativa do formulário inicial
+de abertura para uma etapa intermediária de classificação,
+sob responsabilidade da Qualidade/SAC. Essa decisão resulta da
+convergência entre a necessidade de filtro interno apontada
+pela Analista e a necessidade de transferência de responsável
+apontada pela Supervisora, e ilustra como o redesenho do
+processo (TO-BE) é uma consequência direta do levantamento de
+requisitos, e não uma escolha arbitrária de arquitetura de
+software.
+
+Por fim, foi estabelecida uma etapa de retorno obrigatório à
+Qualidade/SAC após o preenchimento da causa raiz e da ação
+corretiva pela área responsável, antes do encerramento
+definitivo do chamado. Essa regra opera como mecanismo de
+validação previsto pelo ciclo de BPM, impedindo que a própria
+área executora encerre um chamado sem revisão, e reforça a
+rastreabilidade e a governança como objetivos centrais do
+redesenho.
+
+O processo futuro (TO-BE) especificado nesta seção é a base
+direta para os componentes desenvolvidos e descritos na seção
+de Desenvolvimento da Solução, na qual cada estado, campo e
+regra de negócio aqui definidos é implementado no ecossistema
+Microsoft 365.
