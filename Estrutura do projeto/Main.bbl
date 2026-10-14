@@ -19,624 +19,272 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{Alves2022}{article}{}{}
+    \entry{chaudhary2023}{report}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=f80adda9af847ca2d4e0e94799cbad1f}{%
-           family={Alves},
-           familyi={A\bibinitperiod},
-           given={Fábio\bibnamedelima Ramos},
-           giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fc0f05b2b5017446c9e53981bfa71bbb}{%
-           family={Alcalá},
-           familyi={A\bibinitperiod},
-           given={Symone\bibnamedelimb Gomes\bibnamedelima Soares},
-           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Florianópolis}%
-      }
-      \strng{namehash}{6a3fae398254a8f854fe31df31c7939e}
-      \strng{fullhash}{6a3fae398254a8f854fe31df31c7939e}
-      \strng{fullhashraw}{6a3fae398254a8f854fe31df31c7939e}
-      \strng{bibnamehash}{6a3fae398254a8f854fe31df31c7939e}
-      \strng{authorbibnamehash}{6a3fae398254a8f854fe31df31c7939e}
-      \strng{authornamehash}{6a3fae398254a8f854fe31df31c7939e}
-      \strng{authorfullhash}{6a3fae398254a8f854fe31df31c7939e}
-      \strng{authorfullhashraw}{6a3fae398254a8f854fe31df31c7939e}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Revista e-TECH: Tecnologias para Competitividade Industrial}
-      \field{number}{1}
-      \field{title}{Análise da abordagem low-code como facilitador da transformação digital em indústrias}
-      \field{urlday}{1}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{volume}{15}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.18624/etech.v15i1.1186
-      \endverb
-      \verb{urlraw}
-      \verb https://etech.sc.senai.br/revista-cientifica/article/view/1186/99
-      \endverb
-      \verb{url}
-      \verb https://etech.sc.senai.br/revista-cientifica/article/view/1186/99
-      \endverb
-    \endentry
-    \entry{CarvalhoJunior2022}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=aed7a5326313797098f958513964e78c}{%
-           family={Carvalho\bibnamedelima Júnior},
-           familyi={C\bibinitperiod\bibinitdelim J\bibinitperiod},
-           given={Átila},
-           giveni={Á\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5cf93f39a156e2d9f95094af35ff959c}{%
-           family={Vasconcelos},
-           familyi={V\bibinitperiod},
-           given={Aline\bibnamedelimb Pires\bibnamedelimb Vieira\bibnamedelima de},
-           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim d\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b71db93efa67a5db0a656cf99dd449a1}{%
-           family={Silva},
-           familyi={S\bibinitperiod},
-           given={Simone\bibnamedelima Vasconcelos},
-           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {João Pessoa}%
-      }
-      \strng{namehash}{494bd7d4d7dfa66796539abe736ffde0}
-      \strng{fullhash}{494bd7d4d7dfa66796539abe736ffde0}
-      \strng{fullhashraw}{494bd7d4d7dfa66796539abe736ffde0}
-      \strng{bibnamehash}{494bd7d4d7dfa66796539abe736ffde0}
-      \strng{authorbibnamehash}{494bd7d4d7dfa66796539abe736ffde0}
-      \strng{authornamehash}{494bd7d4d7dfa66796539abe736ffde0}
-      \strng{authorfullhash}{494bd7d4d7dfa66796539abe736ffde0}
-      \strng{authorfullhashraw}{494bd7d4d7dfa66796539abe736ffde0}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{2447-9187}
-      \field{journaltitle}{Revista Principia -- Divulgação Científica e Tecnológica do IFPB}
-      \field{number}{3}
-      \field{title}{Análise comparativa de métodos de elicitação de requisitos de software a partir de modelos de processos de negócio}
-      \field{urlday}{29}
-      \field{urlmonth}{8}
-      \field{urlyear}{2026}
-      \field{volume}{59}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \field{pages}{967\bibrangedash 989}
-      \range{pages}{23}
-      \verb{doi}
-      \verb 10.18265/1517-0306a2021id5333
-      \endverb
-      \verb{urlraw}
-      \verb https://periodicos.ifpb.edu.br/index.php/principia/article/view/5333
-      \endverb
-      \verb{url}
-      \verb https://periodicos.ifpb.edu.br/index.php/principia/article/view/5333
-      \endverb
-    \endentry
-    \entry{Costa2022}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=03d192be35a5ba8f5aa8df68ef69701e}{%
-           family={Costa},
+        {{un=0,uniquepart=base,hash=6842d413ecafffd962569df6c17371e7}{%
+           family={Chaudhary},
            familyi={C\bibinitperiod},
-           given={Pedro\bibnamedelimb Henrique\bibnamedelimb Moraes\bibnamedelima Moreira},
-           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Hardik},
+           giveni={H\bibinitperiod},
            givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {Universidade Federal do Ceará}%
-      }
-      \list{location}{1}{%
-        {Fortaleza}%
-      }
-      \strng{namehash}{03d192be35a5ba8f5aa8df68ef69701e}
-      \strng{fullhash}{03d192be35a5ba8f5aa8df68ef69701e}
-      \strng{fullhashraw}{03d192be35a5ba8f5aa8df68ef69701e}
-      \strng{bibnamehash}{03d192be35a5ba8f5aa8df68ef69701e}
-      \strng{authorbibnamehash}{03d192be35a5ba8f5aa8df68ef69701e}
-      \strng{authornamehash}{03d192be35a5ba8f5aa8df68ef69701e}
-      \strng{authorfullhash}{03d192be35a5ba8f5aa8df68ef69701e}
-      \strng{authorfullhashraw}{03d192be35a5ba8f5aa8df68ef69701e}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Trabalho de Conclusão de Curso}
-      \field{title}{Aplicação de ferramentas low-code para melhoria e automação de processos em uma empresa de contabilidade}
-      \field{urlday}{1}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://repositorio.ufc.br/bitstream/riufc/65241/1/2022_tcc_pmoraes.pdf
-      \endverb
-      \verb{url}
-      \verb https://repositorio.ufc.br/bitstream/riufc/65241/1/2022_tcc_pmoraes.pdf
-      \endverb
-    \endentry
-    \entry{Gil2002}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ef995cf98b517fa1168fbbaefe74df6b}{%
-           family={Gil},
+        {{un=0,uniquepart=base,hash=b3265829475202fa3aa6f59c465ca88b}{%
+           family={Guleria},
            familyi={G\bibinitperiod},
-           given={Antônio\bibnamedelima Carlos},
-           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {São Paulo}%
-      }
-      \list{publisher}{1}{%
-        {Atlas}%
-      }
-      \strng{namehash}{ef995cf98b517fa1168fbbaefe74df6b}
-      \strng{fullhash}{ef995cf98b517fa1168fbbaefe74df6b}
-      \strng{fullhashraw}{ef995cf98b517fa1168fbbaefe74df6b}
-      \strng{bibnamehash}{ef995cf98b517fa1168fbbaefe74df6b}
-      \strng{authorbibnamehash}{ef995cf98b517fa1168fbbaefe74df6b}
-      \strng{authornamehash}{ef995cf98b517fa1168fbbaefe74df6b}
-      \strng{authorfullhash}{ef995cf98b517fa1168fbbaefe74df6b}
-      \strng{authorfullhashraw}{ef995cf98b517fa1168fbbaefe74df6b}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{4}
-      \field{title}{Como Elaborar Projetos de Pesquisa}
-      \field{year}{2002}
-    \endentry
-    \entry{Lopes2024}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=76c2dc08fa8efab98ce17931061f22f1}{%
-           family={Lopes},
-           familyi={L\bibinitperiod},
-           given={A.},
+           given={Abhay},
            giveni={A\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{a1a06839e3e4c23f8c46041489ff4cd0}
-      \strng{fullhash}{a1a06839e3e4c23f8c46041489ff4cd0}
-      \strng{fullhashraw}{a1a06839e3e4c23f8c46041489ff4cd0}
-      \strng{bibnamehash}{a1a06839e3e4c23f8c46041489ff4cd0}
-      \strng{authorbibnamehash}{a1a06839e3e4c23f8c46041489ff4cd0}
-      \strng{authornamehash}{a1a06839e3e4c23f8c46041489ff4cd0}
-      \strng{authorfullhash}{a1a06839e3e4c23f8c46041489ff4cd0}
-      \strng{authorfullhashraw}{a1a06839e3e4c23f8c46041489ff4cd0}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{2526-2289}
-      \field{journaltitle}{Revista Gestão e Organizações}
-      \field{number}{4}
-      \field{title}{Gestão de Processos de Negócios para Automatizar Processos com TI}
-      \field{urlday}{1}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{volume}{9}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://periodicos.ifpb.edu.br/index.php/rgo/article/download/8232/2609/0
-      \endverb
-      \verb{url}
-      \verb https://periodicos.ifpb.edu.br/index.php/rgo/article/download/8232/2609/0
-      \endverb
-    \endentry
-    \entry{Malheiros2024}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=03a5a4a2fcb1442d3ca550f8fbbcfc85}{%
-           family={Malheiros},
-           familyi={M\bibinitperiod},
-           given={Ariani\bibnamedelima Gomes},
-           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ca493318559a6236dff55f0226196d45}{%
-           family={Mauro},
-           familyi={M\bibinitperiod},
-           given={Paulo},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
       \list{institution}{1}{%
-        {Faculdade de Tecnologia de São José do Rio Preto (FATEC-SJRP) / Centro Paula Souza}%
+        {Shivalik Small Finance Bank}%
       }
-      \list{location}{1}{%
-        {São José do Rio Preto}%
-      }
-      \strng{namehash}{1b087456bed03c3c2210b6a95aa5f19a}
-      \strng{fullhash}{1b087456bed03c3c2210b6a95aa5f19a}
-      \strng{fullhashraw}{1b087456bed03c3c2210b6a95aa5f19a}
-      \strng{bibnamehash}{1b087456bed03c3c2210b6a95aa5f19a}
-      \strng{authorbibnamehash}{1b087456bed03c3c2210b6a95aa5f19a}
-      \strng{authornamehash}{1b087456bed03c3c2210b6a95aa5f19a}
-      \strng{authorfullhash}{1b087456bed03c3c2210b6a95aa5f19a}
-      \strng{authorfullhashraw}{1b087456bed03c3c2210b6a95aa5f19a}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \strng{namehash}{ee8882ba4af5f56869a0e3c48186181e}
+      \strng{fullhash}{ee8882ba4af5f56869a0e3c48186181e}
+      \strng{fullhashraw}{ee8882ba4af5f56869a0e3c48186181e}
+      \strng{bibnamehash}{ee8882ba4af5f56869a0e3c48186181e}
+      \strng{authorbibnamehash}{ee8882ba4af5f56869a0e3c48186181e}
+      \strng{authornamehash}{ee8882ba4af5f56869a0e3c48186181e}
+      \strng{authorfullhash}{ee8882ba4af5f56869a0e3c48186181e}
+      \strng{authorfullhashraw}{ee8882ba4af5f56869a0e3c48186181e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Informática e Negócios}
-      \field{title}{A importância do Service Level Agreement ({SLA}) na gestão de serviços}
-      \field{urlday}{26}
-      \field{urlmonth}{6}
-      \field{urlyear}{2026}
-      \field{volume}{1}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://ric.cps.sp.gov.br/bitstream/123456789/23232/1/informaticanegocios_2024_1_arianigomesmalheiros_aimportanciadoservicelevelagreementslanagesta.pdf
-      \endverb
-      \verb{url}
-      \verb http://ric.cps.sp.gov.br/bitstream/123456789/23232/1/informaticanegocios_2024_1_arianigomesmalheiros_aimportanciadoservicelevelagreementslanagesta.pdf
-      \endverb
+      \field{note}{Endereço eletrônico não localizado}
+      \field{title}{Helpdesk Ticketing Tool Application}
+      \field{type}{Relatório de graduação (B.Tech)}
+      \field{year}{2023}
     \endentry
-    \entry{Mendes2024}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=0c7e2bb8c3db83901de80d789cdc9911}{%
-           family={Mendes},
-           familyi={M\bibinitperiod},
-           given={Rafael},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=bc3fee2dd4a4f8046f18b9bfcd2bdde8}{%
-           family={Souza},
-           familyi={S\bibinitperiod},
-           given={Carla},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Praia Grande}%
-      }
-      \strng{namehash}{993d7f2c4269443e5670e1d4f979e9dc}
-      \strng{fullhash}{993d7f2c4269443e5670e1d4f979e9dc}
-      \strng{fullhashraw}{993d7f2c4269443e5670e1d4f979e9dc}
-      \strng{bibnamehash}{993d7f2c4269443e5670e1d4f979e9dc}
-      \strng{authorbibnamehash}{993d7f2c4269443e5670e1d4f979e9dc}
-      \strng{authornamehash}{993d7f2c4269443e5670e1d4f979e9dc}
-      \strng{authorfullhash}{993d7f2c4269443e5670e1d4f979e9dc}
-      \strng{authorfullhashraw}{993d7f2c4269443e5670e1d4f979e9dc}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Revista Processando o Saber}
-      \field{title}{Low-code: o que é, vantagens e desafios na transformação digital corporativa}
-      \field{urlday}{1}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{volume}{16}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \field{pages}{216\bibrangedash 229}
-      \range{pages}{14}
-      \verb{urlraw}
-      \verb https://www.fatecpg.edu.br/revista/index.php/ps/article/view/362
-      \endverb
-      \verb{url}
-      \verb https://www.fatecpg.edu.br/revista/index.php/ps/article/view/362
-      \endverb
-    \endentry
-    \entry{Ramos2024}{article}{}{}
-      \name{author}{8}{}{%
-        {{un=0,uniquepart=base,hash=75f2d6de2ef78f3c075afbe0cedffed1}{%
-           family={Ramos},
-           familyi={R\bibinitperiod},
-           given={R.\bibnamedelimi G.\bibnamedelimi G.},
-           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=642cb999c0793e8b7ce4c59980a62b10}{%
-           family={Leite},
-           familyi={L\bibinitperiod},
-           given={O.\bibnamedelimi D.},
-           giveni={O\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0dba1e967ce9dc72d3368bde83558dc0}{%
-           family={Rocha},
-           familyi={R\bibinitperiod},
-           given={W.\bibnamedelimi A.},
-           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7dd7e1071a107e1c83b25f0be98fd57e}{%
-           family={Souza},
-           familyi={S\bibinitperiod},
-           given={A.\bibnamedelimi F.},
-           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=84e20c02a57f87a4953bf7f5d55490b2}{%
-           family={Piantino},
-           familyi={P\bibinitperiod},
-           given={L.\bibnamedelimi F.\bibnamedelimi M.},
-           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=68e44728879bc49c921bae2492ce46d6}{%
-           family={Lemos},
-           familyi={L\bibinitperiod},
-           given={E.\bibnamedelimi P.\bibnamedelimi C.},
-           giveni={E\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=83aa6437cd0b717d7fce6e127ce0c418}{%
-           family={Silva},
-           familyi={S\bibinitperiod},
-           given={H.\bibnamedelimi M.},
-           giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8e6497a32694ae9871c097e8e0717fc5}{%
-           family={Santos},
-           familyi={S\bibinitperiod},
-           given={E.\bibnamedelimi Q.},
-           giveni={E\bibinitperiod\bibinitdelim Q\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{ef21bf2cd2e16033cda34cca4c0d5ca0}
-      \strng{fullhash}{ec8cafc72579bfd0c168d23c0e827ae6}
-      \strng{fullhashraw}{ec8cafc72579bfd0c168d23c0e827ae6}
-      \strng{bibnamehash}{ef21bf2cd2e16033cda34cca4c0d5ca0}
-      \strng{authorbibnamehash}{ef21bf2cd2e16033cda34cca4c0d5ca0}
-      \strng{authornamehash}{ef21bf2cd2e16033cda34cca4c0d5ca0}
-      \strng{authorfullhash}{ec8cafc72579bfd0c168d23c0e827ae6}
-      \strng{authorfullhashraw}{ec8cafc72579bfd0c168d23c0e827ae6}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1678-0817}
-      \field{journaltitle}{Revista FT}
-      \field{title}{Gestão de Processos com BPM e Ferramentas da Qualidade: um Estudo de Caso em uma Instituição de Ensino Federal}
-      \field{urlday}{1}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://revistaft.com.br/gestao-de-processos-com-bpm-e-ferramentas-da-qualidade-um-estudo-de-caso-em-uma-instituicao-de-ensino-federal/
-      \endverb
-      \verb{url}
-      \verb https://revistaft.com.br/gestao-de-processos-com-bpm-e-ferramentas-da-qualidade-um-estudo-de-caso-em-uma-instituicao-de-ensino-federal/
-      \endverb
-    \endentry
-    \entry{ReisFaria2024}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=727f56a1c8248c54c0ac0b08cfbf08ff}{%
-           family={Reis},
-           familyi={R\bibinitperiod},
-           given={Luciano\bibnamedelimb José\bibnamedelimb da\bibnamedelimb Paixão\bibnamedelima Fiel},
-           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=529bcfcbdf472c8666dd44176e5aff5e}{%
-           family={Faria},
-           familyi={F\bibinitperiod},
-           given={Aline\bibnamedelimb Mariane\bibnamedelima de},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim d\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Lajeado}%
-      }
-      \strng{namehash}{c350a6945f367ca2de2c31a4fc9be2a7}
-      \strng{fullhash}{c350a6945f367ca2de2c31a4fc9be2a7}
-      \strng{fullhashraw}{c350a6945f367ca2de2c31a4fc9be2a7}
-      \strng{bibnamehash}{c350a6945f367ca2de2c31a4fc9be2a7}
-      \strng{authorbibnamehash}{c350a6945f367ca2de2c31a4fc9be2a7}
-      \strng{authornamehash}{c350a6945f367ca2de2c31a4fc9be2a7}
-      \strng{authorfullhash}{c350a6945f367ca2de2c31a4fc9be2a7}
-      \strng{authorfullhashraw}{c350a6945f367ca2de2c31a4fc9be2a7}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Revista Estudo \& Debate}
-      \field{number}{2}
-      \field{title}{Desenvolvimento do profissional para automatização de processos com uso de tecnologia: uma revisão sistemática da literatura sobre Robotic Process Automation (RPA) em contabilidade}
-      \field{urlday}{29}
-      \field{urlmonth}{8}
-      \field{urlyear}{2026}
-      \field{volume}{31}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.22410/issn.1983-036X.v31i2a2024.3627
-      \endverb
-      \verb{urlraw}
-      \verb https://univates.br/revistas/index.php/estudoedebate/article/view/3627
-      \endverb
-      \verb{url}
-      \verb https://univates.br/revistas/index.php/estudoedebate/article/view/3627
-      \endverb
-    \endentry
-    \entry{SantosCaldeiraPacheco2026}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=e3451fb2473abe5cdd8d21bad6a0d593}{%
-           family={Santos},
-           familyi={S\bibinitperiod},
-           given={Jaqueline\bibnamedelimb Franciele\bibnamedelima Viana},
-           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim V\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f892cdd8b61eb6defde3e0066360a649}{%
-           family={Caldeira},
+    \entry{costa2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1c92b5faf93c12624457ccbf67bf4ac4}{%
+           family={Costa},
            familyi={C\bibinitperiod},
-           given={Rodrigo\bibnamedelima Alves},
-           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d12837ef1f66c5c6072b84ae6fa06e86}{%
-           family={Pacheco},
-           familyi={P\bibinitperiod},
-           given={Lidyane\bibnamedelimb Darlem\bibnamedelimb dos\bibnamedelima Santos},
-           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Vanessa\bibnamedelimb Pereira\bibnamedelima da},
+           giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim d\bibinitperiod},
            givenun=0}}%
       }
-      \list{location}{1}{%
-        {São Paulo}%
+      \list{organization}{1}{%
+        {UNIPORÁ}%
       }
-      \strng{namehash}{5de753ef2edc15b5d3d0bbecb2b51816}
-      \strng{fullhash}{5de753ef2edc15b5d3d0bbecb2b51816}
-      \strng{fullhashraw}{5de753ef2edc15b5d3d0bbecb2b51816}
-      \strng{bibnamehash}{5de753ef2edc15b5d3d0bbecb2b51816}
-      \strng{authorbibnamehash}{5de753ef2edc15b5d3d0bbecb2b51816}
-      \strng{authornamehash}{5de753ef2edc15b5d3d0bbecb2b51816}
-      \strng{authorfullhash}{5de753ef2edc15b5d3d0bbecb2b51816}
-      \strng{authorfullhashraw}{5de753ef2edc15b5d3d0bbecb2b51816}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \strng{namehash}{1c92b5faf93c12624457ccbf67bf4ac4}
+      \strng{fullhash}{1c92b5faf93c12624457ccbf67bf4ac4}
+      \strng{fullhashraw}{1c92b5faf93c12624457ccbf67bf4ac4}
+      \strng{bibnamehash}{1c92b5faf93c12624457ccbf67bf4ac4}
+      \strng{authorbibnamehash}{1c92b5faf93c12624457ccbf67bf4ac4}
+      \strng{authornamehash}{1c92b5faf93c12624457ccbf67bf4ac4}
+      \strng{authorfullhash}{1c92b5faf93c12624457ccbf67bf4ac4}
+      \strng{authorfullhashraw}{1c92b5faf93c12624457ccbf67bf4ac4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{2675-3375}
-      \field{journaltitle}{Revista Ibero-Americana de Humanidades, Ciências e Educação (REASE)}
-      \field{number}{6}
-      \field{title}{Gestão por Processos e Transformação Digital na Administração Pública Brasileira}
-      \field{urlday}{29}
-      \field{urlmonth}{8}
-      \field{urlyear}{2026}
-      \field{volume}{12}
-      \field{year}{2026}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.51891/rease.v12i6.27547
-      \endverb
+      \field{title}{Engenharia de Requisitos e sua Importância no Desenvolvimento de Software}
+      \field{year}{2023}
       \verb{urlraw}
-      \verb https://periodicorease.pro.br/rease/article/download/27547/17729
+      \verb https://repositorio.unipora.edu.br/index.php/ads/catalog/download/322/291/1484?inline=1
       \endverb
       \verb{url}
-      \verb https://periodicorease.pro.br/rease/article/download/27547/17729
+      \verb https://repositorio.unipora.edu.br/index.php/ads/catalog/download/322/291/1484?inline=1
       \endverb
     \endentry
-    \entry{Santos2023}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=6efad5362e756a21d898882d438980bb}{%
-           family={Santos},
-           familyi={S\bibinitperiod},
-           given={R.\bibnamedelimi F.},
-           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+    \entry{mpm2022}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f849ad10b925ad25e3618d4d2142fcfe}{%
+           family={{Ministério Público Militar}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Brasília}%
+      }
+      \list{publisher}{1}{%
+        {Ministério Público Militar}%
+      }
+      \strng{namehash}{f849ad10b925ad25e3618d4d2142fcfe}
+      \strng{fullhash}{f849ad10b925ad25e3618d4d2142fcfe}
+      \strng{fullhashraw}{f849ad10b925ad25e3618d4d2142fcfe}
+      \strng{bibnamehash}{f849ad10b925ad25e3618d4d2142fcfe}
+      \strng{authorbibnamehash}{f849ad10b925ad25e3618d4d2142fcfe}
+      \strng{authornamehash}{f849ad10b925ad25e3618d4d2142fcfe}
+      \strng{authorfullhash}{f849ad10b925ad25e3618d4d2142fcfe}
+      \strng{authorfullhashraw}{f849ad10b925ad25e3618d4d2142fcfe}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Guia de Modelagem de Processos}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.mpm.mp.br/wp-content/uploads/sites/5/2023/06/guia-de-modelagem-de-processos.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.mpm.mp.br/wp-content/uploads/sites/5/2023/06/guia-de-modelagem-de-processos.pdf
+      \endverb
+    \endentry
+    \entry{motta2017}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6f2c28849ce8d31d021527949298f1bb}{%
+           family={Motta},
+           familyi={M\bibinitperiod},
+           given={Reginaldo\bibnamedelima Welington},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=d32d616d54794441a52819e104a7955f}{%
-           family={Aganette},
-           familyi={A\bibinitperiod},
-           given={Elisângela},
+        {{un=0,uniquepart=base,hash=ba592c33d1f142ab62102bd730d3d78b}{%
+           family={Ferneda},
+           familyi={F\bibinitperiod},
+           given={Edilson},
            giveni={E\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=7304ae28df769be868d14e1cb9dbbba1}{%
+           family={Campos},
+           familyi={C\bibinitperiod},
+           given={Geraldo\bibnamedelima B.},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af3092ace8eadf7634065251f5197e02}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Valdir\bibnamedelimb J.\bibnamedelimi C.\bibnamedelimi O.},
+           giveni={V\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
       }
-      \list{location}{1}{%
-        {Belo Horizonte}%
-      }
-      \strng{namehash}{bba654d98a29991fa0c91dc83a23cd58}
-      \strng{fullhash}{bba654d98a29991fa0c91dc83a23cd58}
-      \strng{fullhashraw}{bba654d98a29991fa0c91dc83a23cd58}
-      \strng{bibnamehash}{bba654d98a29991fa0c91dc83a23cd58}
-      \strng{authorbibnamehash}{bba654d98a29991fa0c91dc83a23cd58}
-      \strng{authornamehash}{bba654d98a29991fa0c91dc83a23cd58}
-      \strng{authorfullhash}{bba654d98a29991fa0c91dc83a23cd58}
-      \strng{authorfullhashraw}{bba654d98a29991fa0c91dc83a23cd58}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \strng{namehash}{3669dab14eedc363cd724c10228f07ac}
+      \strng{fullhash}{47dcc52ea7f34c8c6df218c2aa75e930}
+      \strng{fullhashraw}{47dcc52ea7f34c8c6df218c2aa75e930}
+      \strng{bibnamehash}{3669dab14eedc363cd724c10228f07ac}
+      \strng{authorbibnamehash}{3669dab14eedc363cd724c10228f07ac}
+      \strng{authornamehash}{3669dab14eedc363cd724c10228f07ac}
+      \strng{authorfullhash}{47dcc52ea7f34c8c6df218c2aa75e930}
+      \strng{authorfullhashraw}{47dcc52ea7f34c8c6df218c2aa75e930}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Fórum de Pesquisas Discentes do PPGGOC}
-      \field{number}{4}
-      \field{title}{Plataformas de Desenvolvimento Low-Code na Transformação Digital e no Gerenciamento de Processos de Negócios}
-      \field{urlday}{1}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{volume}{4}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \field{pages}{1\bibrangedash 13}
-      \range{pages}{13}
+      \field{journaltitle}{Gestão, Conhecimento e Tecnologia da Informação (GC\&TI)}
+      \field{number}{2}
+      \field{title}{Elicitação de requisitos orientada por ontologias de domínio}
+      \field{volume}{1}
+      \field{year}{2017}
+      \field{pages}{25\bibrangedash 44}
+      \range{pages}{20}
       \verb{urlraw}
-      \verb https://forped.eci.ufmg.br/revista/forped/article/view/100
+      \verb https://portalrevistas.ucb.br/index.php/rgcti/pt_BR/article/download/10283/6014/45791
       \endverb
       \verb{url}
-      \verb https://forped.eci.ufmg.br/revista/forped/article/view/100
+      \verb https://portalrevistas.ucb.br/index.php/rgcti/pt_BR/article/download/10283/6014/45791
       \endverb
     \endentry
-    \entry{Souza2023}{report}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=8be8dba86a1ba89c2e63fba4d7b10130}{%
-           family={Souza},
-           familyi={S\bibinitperiod},
-           given={Andreza\bibnamedelimb Ariane\bibnamedelimb Praxedes\bibnamedelimb Lira\bibnamedelima de},
-           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim d\bibinitperiod},
+    \entry{nainggolan2025}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6e2b0354686d971bf461fc1882c11a4e}{%
+           family={Nainggolan},
+           familyi={N\bibinitperiod},
+           given={Restamauli\bibnamedelima br},
+           giveni={R\bibinitperiod\bibinitdelim b\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=28febac2702a73782eaaa58c463b3bc7}{%
-           family={Silva},
-           familyi={S\bibinitperiod},
-           given={Luciano\bibnamedelimb Henrique\bibnamedelima da},
-           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim d\bibinitperiod},
+        {{un=0,uniquepart=base,hash=b03560b62242e0d242b7aae76d1dc05d}{%
+           family={Tjahjono},
+           familyi={T\bibinitperiod},
+           given={Budi},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1c835c3608234057b74095ab371bde2}{%
+           family={Widodo},
+           familyi={W\bibinitperiod},
+           given={Agung\bibnamedelima Mulyo},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3d835419c8c64b9fe1284df8f49cbda}{%
+           family={Akbar},
+           familyi={A\bibinitperiod},
+           given={Habibullah},
+           giveni={H\bibinitperiod},
            givenun=0}}%
       }
-      \list{institution}{1}{%
-        {Centro Universitário Brasileiro (UNIBRA)}%
-      }
-      \list{location}{1}{%
-        {Recife}%
-      }
-      \strng{namehash}{dde85de14397de91f5f72a8ebb4129e9}
-      \strng{fullhash}{dde85de14397de91f5f72a8ebb4129e9}
-      \strng{fullhashraw}{dde85de14397de91f5f72a8ebb4129e9}
-      \strng{bibnamehash}{dde85de14397de91f5f72a8ebb4129e9}
-      \strng{authorbibnamehash}{dde85de14397de91f5f72a8ebb4129e9}
-      \strng{authornamehash}{dde85de14397de91f5f72a8ebb4129e9}
-      \strng{authorfullhash}{dde85de14397de91f5f72a8ebb4129e9}
-      \strng{authorfullhashraw}{dde85de14397de91f5f72a8ebb4129e9}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \strng{namehash}{5013e35d7c360447a5fc63792c9113c8}
+      \strng{fullhash}{070ad8973ff6349c814c6a124251f7b1}
+      \strng{fullhashraw}{070ad8973ff6349c814c6a124251f7b1}
+      \strng{bibnamehash}{5013e35d7c360447a5fc63792c9113c8}
+      \strng{authorbibnamehash}{5013e35d7c360447a5fc63792c9113c8}
+      \strng{authornamehash}{5013e35d7c360447a5fc63792c9113c8}
+      \strng{authorfullhash}{070ad8973ff6349c814c6a124251f7b1}
+      \strng{authorfullhashraw}{070ad8973ff6349c814c6a124251f7b1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Tecendo sucesso corporativo: uma interseção entre a comunicação interna e o desempenho organizacional}
-      \field{type}{techreport}
-      \field{urlday}{26}
-      \field{urlmonth}{6}
-      \field{urlyear}{2026}
-      \field{year}{2023}
-      \field{urldateera}{ce}
+      \field{journaltitle}{Eduvest -- Journal of Universal Studies}
+      \field{number}{8}
+      \field{subtitle}{A Case Study of PT Erafone Dotcom}
+      \field{title}{Evaluation of IT System Operational Services using The ITIL Framework in the Service Desk Domain}
+      \field{volume}{5}
+      \field{year}{2025}
+      \field{pages}{10040\bibrangedash 10058}
+      \range{pages}{19}
       \verb{urlraw}
-      \verb https://www.grupounibra.com/repositorio/ADMIN/2023/tecendo-sucesso-corporativo-uma-intersecao-entre-a-comunicacao-interna-e-o-desempenho-organizacional.pdf
+      \verb http://eduvest.greenvest.co.id
       \endverb
       \verb{url}
-      \verb https://www.grupounibra.com/repositorio/ADMIN/2023/tecendo-sucesso-corporativo-uma-intersecao-entre-a-comunicacao-interna-e-o-desempenho-organizacional.pdf
+      \verb http://eduvest.greenvest.co.id
+      \endverb
+    \endentry
+    \entry{tosi2025}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=31813bc179fc41d6848a89c938a935e0}{%
+           family={Tosi},
+           familyi={T\bibinitperiod},
+           given={Mauro\bibnamedelimb Dalle\bibnamedelima Lucca},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88bf40974893e97c9c1ebc8fbfa7c234}{%
+           family={Cánovas\bibnamedelima Izquierdo},
+           familyi={C\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Javier\bibnamedelima Luis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62ac8b9f995fa937460d3e98b6b95465}{%
+           family={Cabot},
+           familyi={C\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{d58e04cba6e157ba1e6bca04021f92e2}
+      \strng{fullhash}{d58e04cba6e157ba1e6bca04021f92e2}
+      \strng{fullhashraw}{d58e04cba6e157ba1e6bca04021f92e2}
+      \strng{bibnamehash}{d58e04cba6e157ba1e6bca04021f92e2}
+      \strng{authorbibnamehash}{d58e04cba6e157ba1e6bca04021f92e2}
+      \strng{authornamehash}{d58e04cba6e157ba1e6bca04021f92e2}
+      \strng{authorfullhash}{d58e04cba6e157ba1e6bca04021f92e2}
+      \strng{authorfullhashraw}{d58e04cba6e157ba1e6bca04021f92e2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Metascience Study of the Low-Code Scientific Field}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.14808375
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.14808375
       \endverb
     \endentry
   \enddatalist
-  \missing{onu2023}
 \endrefsection
 \endinput
 

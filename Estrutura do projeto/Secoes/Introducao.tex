@@ -1,295 +1,132 @@
-\section{Introdução}
-
-A transformação digital tem exigido das organizações não
-apenas a adoção de novas ferramentas, mas a revisão de seus
-processos internos, especialmente aqueles que ainda dependem
-de comunicação informal entre setores. Quando problemas
-recorrentes são reportados por aplicativos de mensagens ou
-e-mails não estruturados, sem protocolo e sem registro
-centralizado, a organização perde rastreabilidade, dificulta
-a gestão e impossibilita a geração de indicadores de
-desempenho \cite{Ramos2024}. A literatura recente sobre
-transformação digital é enfática ao afirmar que a
-digitalização de um fluxo manual, quando realizada sem a
-revisão estrutural do processo que lhe deu origem, tende
-apenas a reproduzir em ambiente eletrônico as mesmas
-ineficiências já existentes \cite{SantosCaldeiraPacheco2026}.
-Este trabalho parte dessa premissa: antes de desenvolver uma
-aplicação, é necessário compreender e redesenhar o processo
-que ela pretende sustentar.
-
-Assim, a lógica de construção desta pesquisa segue uma
-sequência específica --- do problema organizacional à
-automação --- que também organiza a estrutura dos capítulos
-deste trabalho: identificação do problema organizacional,
-análise e entendimento do processo existente, identificação
-dos gargalos e necessidades, levantamento de requisitos,
-redesenho do processo e, somente então, desenvolvimento da
-solução tecnológica e automação. Essa sequência é sustentada
-pela integração entre a Engenharia de Processos, o
-\textit{Business Process Management} (BPM), a Engenharia de
-Software, a Engenharia de Requisitos e a abordagem
-\textit{low-code}, discutidas na Base Teórica deste trabalho.
-
-Em organizações que ainda não dispõem de um canal único de
-abertura de chamados internos, problemas que exigem análise e
-resolução por diferentes áreas são comunicados de forma não
-padronizada. Não há protocolo gerado automaticamente, não há
-controle de prazo e não há visibilidade gerencial sobre o
-volume, a prioridade ou o tempo médio de resolução dessas
-demandas. A ausência de um canal formalizado de entrada expõe
-a organização ao retrabalho, à perda de informações e à
-impossibilidade de identificar causas raiz dos problemas
-recorrentes \cite{Santos2023}.
-
-Diante desse cenário, este trabalho realiza a análise do
-processo atual (AS-IS), o levantamento de requisitos, a
-modelagem do processo futuro (TO-BE), o desenvolvimento e a
-implantação de um fluxo de gestão de chamados internos entre
-áreas, tendo como ponto de entrada um site desenvolvido no
-\textbf{SharePoint}, responsável por centralizar a abertura
-das solicitações. Os chamados registrados nesse site
-constituem a entrada de um processo automatizado desenvolvido
-com base no ecossistema Microsoft~365, contemplando o registro
-estruturado da solicitação, a padronização do fluxo entre as
-áreas envolvidas e a geração de indicadores gerenciais de
-acompanhamento \cite{Lopes2024}.
-
-O objetivo geral deste trabalho é analisar o processo atual
-de comunicação de chamados internos entre áreas, levantar os
-requisitos, redesenhar e modelar o processo, e desenvolver e
-implantar um sistema de gestão de chamados internos, tendo
-como ponto de entrada um site no SharePoint e utilizando
-ferramentas do ecossistema Microsoft 365, de modo a
-padronizar a abertura das solicitações, eliminar a
-comunicação informal e viabilizar a geração de indicadores
-gerenciais de desempenho do processo.
-
-% ─── JUSTIFICATIVA ────────────────────────────────────────
-\subsection{Justificativa do Tema}
-
-A escolha do tema fundamenta-se em quatro dimensões
-complementares: relevância prática imediata, aderência à
-disciplina de Engenharia de Processos e de Gestão de
-Processos de Negócio, aderência às competências da
-Engenharia de Software e da Engenharia de Requisitos, e
-contribuição ao conhecimento acadêmico aplicado.
-
-Do ponto de vista prático, a organização estudada não dispõe
-de qualquer mecanismo formalizado para abertura,
-acompanhamento e encerramento de chamados internos entre
-áreas. O autor possui conhecimento direto das dificuldades
-operacionais do processo e acesso às informações necessárias
-ao seu diagnóstico e ao levantamento de requisitos
-\cite{Gil2002}. A ausência de um canal formalizado de abertura
-de chamados gera custos ocultos decorrentes de retrabalho,
-perda de informações em canais informais e impossibilidade de
-gestão baseada em dados.
-
-Do ponto de vista da Engenharia de Processos e do BPM, o tema
-exige que a solução tecnológica seja precedida pela
-compreensão do processo existente e pelo seu redesenho
-estruturado, superando a lógica de que a automação, por si
-só, resolve problemas de gestão \cite{SantosCaldeiraPacheco2026}.
-Do ponto de vista da Engenharia de Software e da Engenharia
-de Requisitos, o tema mobiliza competências nucleares do
-curso: especificação de requisitos a partir da modelagem do
-processo de negócio \cite{CarvalhoJunior2022}, arquitetura de
-solução orientada a serviços e avaliação de qualidade com
-usuários. A construção de um sistema de chamados com controle
-de status, prioridade, SLA, causa raiz e rastreabilidade,
-integrado a um painel gerencial, constitui um projeto de
-engenharia completo, com requisitos funcionais e não
-funcionais bem definidos, mesmo em ambiente \textit{low-code}
-\cite{Alves2022}.
-
-Do ponto de vista acadêmico, a pesquisa contribui com
-evidência empírica sobre a aplicação integrada da Engenharia
-de Processos, do BPM, da Engenharia de Requisitos e do
-\textit{low-code} na modelagem de um processo de gestão de
-chamados internos, a partir de um site no SharePoint como
-ponto único de entrada, integrado ao ecossistema Microsoft
-365 --- recorte pouco explorado de forma conjunta na
-literatura nacional recente, constituindo contribuição
-original ao campo \cite{Santos2023}.
-
-% ─── PROBLEMA ─────────────────────────────────────────────
-\subsection{Problema da Pesquisa}
-
-Os chamados internos entre áreas da organização são
-comunicados por aplicativos de mensagens e e-mails sem
-padronização, sem geração de protocolo, sem controle de prazo
-e sem registro centralizado. A área responsável pela análise
-recebe a demanda sem garantia de completude das informações.
-A gestão não possui indicadores sobre volume, prioridade,
-tempo de resolução ou causa raiz dos problemas. Chamados são
-esquecidos ou duplicados sem que haja mecanismo de alerta ou
-escalonamento.
-
-Diante desse contexto, formula-se a seguinte questão de
-pesquisa:
-
-\textit{Como estruturar, a partir da análise do processo
-atual e de um site no SharePoint como ponto único de entrada,
-o levantamento de requisitos, o redesenho, a modelagem, o
-desenvolvimento e a implantação de um processo automatizado
-de gestão de chamados internos entre áreas, capaz de
-padronizar a abertura, garantir rastreabilidade, controlar
-SLA por prioridade, registrar causa raiz e gerar indicadores
-gerenciais de volume, tempo médio de resolução e percentual
-de chamados concluídos dentro do prazo?}
-
-% ─── HIPÓTESE ─────────────────────────────────────────────
-\subsection{Hipótese}
-
-A análise do processo atual, o levantamento de requisitos, o
-redesenho segundo os princípios do BPM, o desenvolvimento e a
-implantação de um processo de gestão de chamados internos
-entre áreas --- tendo como ponto de entrada um site no
-SharePoint e como componentes de automação a Microsoft List,
-o Power Automate e o Power BI --- permitem obter uma solução
-capaz de eliminar a comunicação informal entre setores,
-garantir rastreabilidade integral dos chamados, controlar SLA
-por prioridade, registrar causa raiz e ação corretiva, e
-gerar indicadores gerenciais de volume, tempo médio de
-resolução e percentual de atendimentos dentro do prazo,
-contribuindo para a melhoria mensurável da eficiência
-operacional das áreas envolvidas.
-
-% ─── ESTADO DA ARTE ───────────────────────────────────────
-\subsection{Estado da Arte}
-
-O levantamento realizado para este trabalho abrangeu
-produções em língua portuguesa, publicadas nos últimos cinco
-anos e indexadas no Google Scholar, SciELO e Portal de
-Periódicos CAPES, com os descritores: \textit{engenharia de
-processos}, \textit{BPM}, \textit{engenharia de requisitos},
-\textit{elicitação de requisitos}, \textit{low-code},
-\textit{Microsoft List}, \textit{Power Automate},
-\textit{automação de processos}, \textit{SLA} e
-\textit{indicadores de desempenho}.
-
-No campo da Engenharia de Processos e da transformação
-digital, \cite{SantosCaldeiraPacheco2026} demonstram que a
-transformação digital efetiva depende da revisão e do
-redesenho estruturado dos processos organizacionais, e não da
-simples informatização de fluxos preexistentes, resultado que
-orienta diretamente a decisão deste trabalho de tratar o
-redesenho do processo como etapa anterior ao desenvolvimento.
-No campo da gestão de processos, \cite{Ramos2024} demonstram
-que a disponibilização de dados gerenciais estruturados é o
-resultado de maior valor percebido após iniciativas de BPM em
-instituições de médio e grande porte. Em linha com esse
-resultado, \cite{Lopes2024} evidenciam que a digitalização de
-processos com BPM e ferramentas do ecossistema Microsoft
-resultou em repositório único de dados com rastreabilidade
-completa, eliminando a comunicação informal entre setores.
-
-No campo da Engenharia de Requisitos, \cite{CarvalhoJunior2022}
-demonstram que a derivação de requisitos de software a partir
-da modelagem prévia do processo de negócio produz requisitos
-mais alinhados às metas organizacionais do que técnicas
-tradicionais de elicitação isoladas, resultado que reforça a
-opção metodológica deste trabalho de conduzir o levantamento
-de requisitos junto a perfis que representam diferentes níveis
-de atuação no processo.
-
-No campo das plataformas \textit{low-code},
-\cite{Alves2022} identificam redução de até 60\% no tempo de
-desenvolvimento de soluções corporativas com o paradigma
-\textit{low-code} em comparação ao desenvolvimento
-tradicional, destacando o ecossistema Microsoft 365 como
-plataforma de maior penetração no mercado nacional.
-\cite{Santos2023} concluem que a combinação de BPM com
-\textit{low-code} é especialmente eficaz na construção de
-repositórios e painéis de acompanhamento, pois permite que as
-regras de negócio sejam configuradas pelas próprias áreas
-proprietárias dos processos. \cite{Costa2022} demonstram, em
-estudo de caso aplicado, que a adoção de ferramentas
-\textit{low-code} resultou em rastreabilidade completa e
-redução de 45\% no tempo de processamento de solicitações
-internas.
-
-No campo da automação de processos, \cite{ReisFaria2024}
-evidenciam, em revisão sistemática sobre automação robótica
-de processos, que os ganhos de padronização e redução de
-retrabalho são mais consistentes quando a automação é
-aplicada sobre um processo já revisado. No campo da gestão de
-SLA, \cite{Malheiros2024} concluem que o SLA é fundamental
-para estabelecer expectativas claras entre áreas, promovendo
-qualidade, transparência e rastreabilidade na resolução de
-chamados, e destacam que a automação do controle de prazos é
-condição para que o SLA deixe de ser apenas um documento
-formal.
-
-O levantamento evidencia uma lacuna na literatura nacional
-quanto à aplicação integrada da Engenharia de Processos, do
-BPM e da Engenharia de Requisitos na construção de processos
-de gestão de chamados internos entre áreas a partir do
-ecossistema Microsoft 365, com um site no SharePoint como
-ponto único de entrada. O presente trabalho busca preencher
-essa lacuna com a análise do processo atual, o levantamento
-de requisitos, o redesenho, o desenvolvimento e a implantação
-do processo, documentados de forma estruturada.
-
-% ─── OBJETIVOS ────────────────────────────────────────────
-\subsection{Objetivos}
-
-\subsubsection{Objetivo Geral}
-
-Analisar o processo atual de gestão de chamados internos
-entre áreas, levantar os requisitos, redesenhar e modelar o
-processo, e desenvolver e implantar um sistema de gestão de
-chamados internos, tendo como ponto de entrada um site no
-SharePoint e utilizando plataformas do ecossistema Microsoft
-365, de modo a padronizar a abertura, garantir
-rastreabilidade, controlar SLA por prioridade, registrar
-causa raiz e gerar indicadores gerenciais de desempenho do
-processo.
-
-\subsubsection{Objetivos Específicos}
-
-\begin{itemize}
-    \item Analisar o processo atual (AS-IS) de comunicação de
-    chamados internos entre áreas, identificando participantes,
-    atividades manuais e pontos de falha;
-
-    \item Levantar e especificar os requisitos funcionais e
-    não funcionais do processo por meio de um formulário
-    estruturado, aplicado aos profissionais responsáveis pelo
-    processo em diferentes níveis de atuação (Analista,
-    Supervisora e Gerente), com perguntas direcionadas
-    conforme o nível de responsabilidade de cada participante;
-
-    \item Redesenhar o processo (TO-BE) a partir dos
-    requisitos levantados, definindo os campos obrigatórios de
-    abertura no site do SharePoint, os status possíveis
-    (Aberto, Em análise, Concluído), os critérios de
-    prioridade (Alta, Média, Baixa) e o tempo de SLA associado
-    a cada nível de prioridade;
-
-    \item Especificar o repositório centralizado a ser
-    integrado ao site do SharePoint, com os campos: Protocolo
-    N\textsuperscript{o}, Tipo de chamado (Massivo ou Interno),
-    Assunto, Problema, Quantidade de protocolos relacionados,
-    Área Responsável, Prioridade, Evidências, Solicitante,
-    Status, Causa raiz, Ação corretiva, SLA (contagem
-    automática) e Data da solução;
-
-    \item Desenvolver o fluxo automatizado responsável por
-    registrar cada chamado a partir do site do SharePoint,
-    gerar protocolo único, enviar notificação à área
-    responsável com link de acesso direto ao chamado e
-    realizar a contagem automática do SLA;
-
-    \item Desenvolver e implantar o painel gerencial com os
-    indicadores: chamados abertos, em análise e concluídos por
-    período; tempo médio de resolução; percentual de chamados
-    dentro do SLA; distribuição por área responsável e por
-    prioridade; e base histórica com rastreabilidade completa
-    por protocolo;
-
-    \item Validar o novo modelo do processo junto aos
-    participantes envolvidos, a partir do fluxo implantado e
-    do painel gerencial em uso.
-\end{itemize}
+\section{INTRODUÇÃO}
+ 
+\subsection{CONTEXTUALIZAÇÃO}
+ 
+Em organizações com múltiplas áreas operacionais, a rotina depende da resolução de ocorrências que
+  atravessam as fronteiras entre as áreas, o que exige que cada ocorrência seja registrada,
+  encaminhada à área responsável e acompanhada até a conclusão de suas tratativas.
+Na gestão de chamados, tradicionalmente associada aos centros de suporte (\textit{service desk}) de
+  Tecnologia da Informação (TI), \textcite{nainggolan2025} destacam o papel crítico da central de
+  serviços na resolução eficiente dos problemas dos usuários e a condução do atendimento com base em
+  padrões definidos por Acordos de Nível de Serviço (\textit{Service Level Agreement} -- SLA).
+Contudo, atrasos nas respostas e o acúmulo de solicitações em horários de pico dificultam o
+  cumprimento desses acordos \cite{nainggolan2025}.
+Esse raciocínio é transponível para as ocorrências operacionais entre áreas:
+na ausência de um fluxo padronizado de registro e tratativa, tornam-se mais prováveis demoras no
+  registro, dificuldade em identificar a área responsável e perda do histórico das tratativas.
+Diante disso, faz-se necessário redesenhar o processo de registro e tratativa dessas ocorrências, de
+  modo a reduzir o tempo de atendimento e elevar a produtividade das equipes.
+ 
+Para estruturar esse redesenho, a Gestão de Processos de Negócio (\textit{Business Process
+  Management} -- BPM) é uma metodologia voltada para administrar todo o ciclo de vida dos processos
+  \cite{mpm2022}, e a notação \textit{Business Process Model and Notation} (BPMN) permite mapear o
+  estado atual (\textit{as-is}) e modelar o estado futuro (\textit{to-be}).
+Complementarmente, a Engenharia de Requisitos fornece uma abordagem estruturada para compreender,
+  documentar e gerenciar os requisitos do sistema, minimizando retrabalho, atrasos e custos
+  adicionais \cite{costa2023}.
+Sob a perspectiva tecnológica, o ecossistema Microsoft 365 e Microsoft Power Platform reúne recursos
+  \textit{low-code} para as etapas da solução:
+o Power Apps, por exemplo, permite criar e distribuir rapidamente aplicações \textit{low-code}
+  robustas, o SharePoint pode ser usado para armazenar e gerenciar diversos tipos de dados e o Power
+  BI oferece visualizações interativas \cite{chaudhary2023};
+o Power Automate, por sua vez, permite automatizar os fluxos de trabalho.
+ 
+O presente estudo delimita-se à análise, proposição de redesenho e automação do processo de gestão
+  de chamados internos entre áreas de uma organização do setor de serviços de transporte, destinados
+  ao registro de ocorrências operacionais e ao registro das tratativas realizadas pela área
+  responsável.
+ 
+\subsection{PROBLEMA DE PESQUISA}
+ 
+A condução inadequada da gestão de chamados manifesta-se em atrasos no atendimento e acúmulo de
+  solicitações, o que dificulta o cumprimento dos SLAs \cite{nainggolan2025}.
+No caso das ocorrências operacionais entre áreas, soma-se a isso a execução manual de
+  encaminhamentos, a dificuldade de registrar de forma padronizada as tratativas da área responsável
+  e a escassez de dados consolidados, que limitam a capacidade gestora de identificar gargalos e
+  mitigar o retrabalho.
+Do lado dos requisitos, projetos bem-sucedidos dependem de uma abordagem robusta de Engenharia de
+  Requisitos \cite{costa2023}, e a rastreabilidade dos requisitos é necessária para o controle de
+  suas alterações \cite{motta2017};
+na ausência dessa disciplina, tornam-se mais prováveis especificações incompletas e falhas de
+  rastreabilidade das tratativas.
+Ante esse cenário, sobressai a necessidade de integrar a modelagem de processos em BPM e a gestão de
+  requisitos a ferramentas de automação \textit{low-code}, desenhando-se o processo antes de
+  construir o fluxo automatizado.
+ 
+De que maneira o redesenho do processo de gestão de chamados internos entre áreas, destinados ao
+  registro de ocorrências operacionais e das tratativas da área responsável, estruturado pela
+  Engenharia de Requisitos e modelado em BPM, quando automatizado por tecnologias \textit{low-code}
+  do ecossistema Microsoft 365 (Microsoft Lists/SharePoint, Power Automate e Power BI), pode reduzir
+  o tempo médio de registro e tratativa das ocorrências, mitigar o retrabalho, assegurar a
+  rastreabilidade das tratativas e ampliar a visibilidade gerencial do cumprimento dos SLAs?
+ 
+\subsection{JUSTIFICATIVA}
+ 
+A justificativa sob a perspectiva acadêmica baseia-se na importância de investigar a aplicação
+  integrada entre a Gestão de Processos de Negócio (BPM), a Engenharia de Requisitos e as
+  tecnologias \textit{low-code} na resolução de problemas operacionais de software.
+Segundo \textcite{tosi2025}, a literatura científica sobre a abordagem \textit{low-code} passou a
+  crescer a partir de 2018, com forte aceleração, o que torna relevante o desenvolvimento de
+  trabalhos que explicitem como métodos de modelagem e de requisitos se articulam com plataformas de
+  desenvolvimento rápido.
+Sob a perspectiva prática e organizacional, o estudo justifica-se pela necessidade de otimizar a
+  gestão de chamados, dado o papel crítico das centrais de serviços na resolução eficiente dos
+  problemas dos usuários \cite{nainggolan2025}, e de garantir que as ocorrências operacionais entre
+  áreas tenham registro e tratativas rastreáveis.
+Do ponto de vista operacional, a pesquisa propõe aplicar ferramentas do ecossistema Microsoft 365,
+  que permitem criar rapidamente aplicações \textit{low-code} \cite{chaudhary2023}, à melhoria do
+  registro e da tratativa dessas ocorrências, estabelecendo a governança antes de construir os
+  fluxos.
+Além disso, o Power BI oferece visualizações interativas \cite{chaudhary2023} que podem apoiar o
+  acompanhamento dos indicadores de SLA e a tomada de decisão gerencial.
+ 
+\subsection{HIPÓTESE}
+ 
+A reestruturação do processo de gestão de chamados internos entre áreas, pautada pela Engenharia de
+  Requisitos, modelada em BPM e automatizada via plataforma \textit{low-code} do ecossistema
+  Microsoft 365, otimizará os indicadores operacionais e de governança do registro e da tratativa
+  das ocorrências.
+O comportamento previsto para as variáveis do estudo estabelece que:
+ 
+{\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+  \item a variável tempo médio de registro e tratativa das ocorrências apresentará redução em
+      decorrência da automação do roteamento de solicitações para a área responsável e do
+      encadeamento de fluxos de trabalho;
+  \item a variável retrabalho sofrerá mitigação mediante a validação padronizada dos dados de
+      entrada na abertura do chamado e a definição clara das regras de transição de estado;
+  \item a variável rastreabilidade alcançará elevação a partir do registro centralizado e com
+      histórico de versões das ocorrências e das tratativas da área responsável em repositórios
+      estruturados e da gerência sistemática de requisitos;
+  \item a variável visibilidade gerencial será expandida pela consolidação de métricas e
+      acompanhamento contínuo dos SLAs em painéis analíticos no Power BI.
+\end{enumerate}}
+ 
+Tais relações serão verificadas na etapa de avaliação, por meio da comparação com a situação
+  \textit{as-is}.
+ 
+\subsection{OBJETIVO GERAL}
+ 
+Implementar o redesenho e a automação da gestão de chamados internos entre áreas, destinados ao
+  registro de ocorrências operacionais e das tratativas da área responsável, integrando Engenharia
+  de Requisitos, Gestão de Processos de Negócio e tecnologias \textit{low-code} do ecossistema
+  Microsoft 365, para o aprimoramento do cumprimento de SLAs, da rastreabilidade e da visibilidade
+  gerencial.
+ 
+\subsection{OBJETIVOS ESPECÍFICOS}
+ 
+{\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+  \item mapear o fluxo de registro e tratativa da situação atual (\textit{as-is}) de chamados
+      internos entre áreas, identificando gargalos operacionais, causas de retrabalho e falhas de
+      rastreabilidade;
+  \item projetar o modelo futuro (\textit{to-be}) do processo, especificando os requisitos
+      funcionais e não funcionais do sistema e estabelecendo os critérios de Acordo de Nível de
+      Serviço (SLA);
+  \item construir a solução automatizada utilizando ferramentas \textit{low-code} do ecossistema
+      Microsoft 365 (Microsoft Lists/SharePoint para armazenamento de dados, Power Automate para
+      automação de \textit{workflows} e Power BI para visualização de indicadores gerenciais);
+  \item avaliar os resultados alcançados frente à situação \textit{as-is}, considerando o tempo
+      médio de registro e tratativa dessas ocorrências, o retrabalho, a rastreabilidade e a
+      visibilidade gerencial.
+\end{enumerate}}
